@@ -9,14 +9,4 @@ export interface IRouterliciousDriverPolicies {
      * Default: true
      */
     enablePrefetch: boolean;
-    /**
-     * Rate limit concurrent storage requests.
-     * Default: 100
-     */
-    maxConcurrentStorageRequests: number;
-    /**
-     * Rate limit concurrent orderer requests.
-     * Default: 100
-     */
-    maxConcurrentOrdererRequests: number;
 }

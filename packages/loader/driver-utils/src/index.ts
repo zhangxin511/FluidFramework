@@ -16,5 +16,4 @@ export * from "./summaryForCreateNew";
 export * from "./parallelRequests";
 export * from "./prefetchDocumentStorageService";
 export * from "./networkUtils";
-export * from "./rateLimiter";
 export * from "./runWithRetry";
