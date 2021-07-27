@@ -4,12 +4,12 @@
  */
 
 import { IQueuedMessage } from "@fluidframework/server-services-core";
-import { Lumber } from "@fluidframework/server-services-telemetry";
+import { Lumber, QueuedMessageProperties } from "@fluidframework/server-services-telemetry";
 
-export const setQueuedMessageProperties = (lumber: Lumber, message: IQueuedMessage) => {
+export const setQueuedMessageProperties = (message: IQueuedMessage, lumber?: Lumber) => {
     const propertyMap = new Map<string, any>([
-        ["topic", message.topic],
-        ["partition", message.partition],
-        ["offset", message.offset]]);
-    lumber.setProperties(propertyMap);
+        [QueuedMessageProperties.topic, message.topic],
+        [QueuedMessageProperties.partition, message.partition],
+        [QueuedMessageProperties.offset, message.offset]]);
+    lumber?.setProperties(propertyMap);
 };
