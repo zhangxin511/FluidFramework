@@ -29,7 +29,11 @@
     "tsfmt:fix": "tsfmt --replace"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fluidframework/container-definitions": "^0.39.7",
+=======
+    "@fluidframework/container-definitions": "^0.39.8",
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
     "@fluidframework/core-interfaces": "^0.39.7"
   },
   "devDependencies": {

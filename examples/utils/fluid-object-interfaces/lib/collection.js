@@ -2,5 +2,5 @@
  * Copyright (c) Microsoft Corporation and contributors. All rights reserved.
  * Licensed under the MIT License.
  */
-
-export * from "./collection";
+export const IFluidObjectCollection = "IFluidObjectCollection";
+//# sourceMappingURL=collection.js.map

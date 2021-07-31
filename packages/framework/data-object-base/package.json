@@ -56,7 +56,11 @@
   "dependencies": {
     "@fluidframework/common-definitions": "^0.20.1",
     "@fluidframework/common-utils": "^0.31.0",
+<<<<<<< HEAD
     "@fluidframework/container-definitions": "^0.39.7",
+=======
+    "@fluidframework/container-definitions": "^0.39.8",
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
     "@fluidframework/container-runtime": "^0.45.0",
     "@fluidframework/core-interfaces": "^0.39.7",
     "@fluidframework/datastore": "^0.45.0",

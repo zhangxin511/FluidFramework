@@ -15,4 +15,8 @@ export enum LumberEventName {
 
     // Lambdas
     DeliHandler = "DeliHandler",
+<<<<<<< HEAD
+=======
+    ScribeHandler = "ScribeHandler",
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 }

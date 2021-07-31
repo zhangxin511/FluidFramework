@@ -156,7 +156,8 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
                         client.lastUpdate,
                         client.canEvict,
                         client.scopes,
-                        client.nack);
+                        client.nack,
+                        client.serverMetadata);
                 }
             }
         }
@@ -186,13 +187,24 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
 
     public handler(rawMessage: IQueuedMessage) {
         let kafkaCheckpointMessage: IQueuedMessage | undefined;
+<<<<<<< HEAD
         const lumberJackMetric = DefaultServiceConfiguration.enableLumberTelemetryFramework ?
+=======
+        const lumberJackMetric = this.serviceConfiguration.enableLumberTelemetryFramework ?
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
             Lumberjack.newLumberMetric(LumberEventName.DeliHandler) : undefined;
 
         if (lumberJackMetric)
         {
+<<<<<<< HEAD
             lumberJackMetric.setProperties(new Map([[BaseTelemetryProperties.tenantId, this.tenantId],
                 [BaseTelemetryProperties.documentId, this.documentId]]));
+=======
+            lumberJackMetric.setProperties({
+                [BaseTelemetryProperties.tenantId]: this.tenantId,
+                [BaseTelemetryProperties.documentId]: this.documentId,
+            });
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
             setQueuedMessageProperties(rawMessage, lumberJackMetric);
         }
 
@@ -203,7 +215,12 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
                 this.context.checkpoint(kafkaCheckpointMessage);
             }
 
+<<<<<<< HEAD
             lumberJackMetric?.success("Already processed checkpointed message");
+=======
+            lumberJackMetric?.success(`Already processed upto offset ${this.logOffset}.
+                Current message offset ${rawMessage.offset}`);
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
             return undefined;
         }
 
@@ -269,6 +286,10 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
                     checkpoint.clear = true;
                 }
                 this.checkpointContext.checkpoint(checkpoint);
+                if (lumberJackMetric)
+                {
+                    this.setDeliStateMetrics(checkpoint, lumberJackMetric);
+                }
             },
             (error) => {
                 lumberJackMetric?.setProperties(new Map([[CommonProperties.restart, true]]));
@@ -302,6 +323,7 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
                 this.sequencedMessagesSinceLastOpEvent += sequencedMessageCount;
 
                 if (this.sequencedMessagesSinceLastOpEvent > maxOps) {
+                    lumberJackMetric?.setProperties({[CommonProperties.maxOpsSinceLastSummary]: true});
                     this.emitOpEvent(OpEventType.MaxOps);
                 }
             }
@@ -324,6 +346,7 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
     }
 
     private setDeliStateMetrics(checkpoint: ICheckpointParams, lumberJackMetric?: Lumber<LumberEventName.DeliHandler>) {
+<<<<<<< HEAD
         const deliState = new Map([
             [DeliStateProperties.ConnectedClientCount, checkpoint.deliState.clients?.length],
             [DeliStateProperties.DSN, checkpoint.deliState.durableSequenceNumber],
@@ -332,6 +355,14 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
             [DeliStateProperties.Term, checkpoint.deliState.term],
             [DeliStateProperties.LastSentMSN, checkpoint.deliState.lastSentMSN],
         ]);
+=======
+        const deliState = {
+            [CommonProperties.clientCount]: checkpoint.deliState.clients?.length,
+            [CommonProperties.checkpointOffset]: checkpoint.deliState.logOffset,
+            [CommonProperties.sequenceNumber]: checkpoint.deliState.sequenceNumber,
+            [CommonProperties.minSequenceNumber]: checkpoint.deliState.lastSentMSN,
+        };
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 
         lumberJackMetric?.setProperties(deliState);
     }
@@ -415,7 +446,8 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
                     this.minimumSequenceNumber,
                     message.timestamp,
                     true,
-                    clientJoinMessage.detail.scopes);
+                    clientJoinMessage.detail.scopes,
+                    message.operation.serverMetadata);
                 // Return if the client has already been added due to a prior join message.
                 if (!isNewClient) {
                     return;
@@ -734,7 +766,7 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
         if (message.type !== MessageType.ClientLeave) {
             const idleClient = this.getIdleClient(message.timestamp);
             if (idleClient?.clientId) {
-                const leaveMessage = this.createLeaveMessage(idleClient.clientId);
+                const leaveMessage = this.createLeaveMessage(idleClient.clientId, idleClient.serverMetadata);
                 void this.sendToAlfred(leaveMessage);
             }
         }
@@ -743,7 +775,7 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
     /**
      * Creates a leave message for inactive clients.
      */
-    private createLeaveMessage(clientId: string): IRawOperationMessage {
+    private createLeaveMessage(clientId: string, serverMetadata?: any): IRawOperationMessage {
         const operation: IDocumentSystemMessage = {
             clientSequenceNumber: -1,
             contents: null,
@@ -751,6 +783,7 @@ export class DeliLambda extends EventEmitter implements IPartitionLambda {
             referenceSequenceNumber: -1,
             traces: this.serviceConfiguration.enableTraces ? [] : undefined,
             type: MessageType.ClientLeave,
+            serverMetadata,
         };
         const leaveMessage: IRawOperationMessage = {
             clientId: null,

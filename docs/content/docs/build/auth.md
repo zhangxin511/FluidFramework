@@ -27,7 +27,11 @@ Anyone with access to the secret can impersonate your application when communica
 {{% /callout %}}
 
 Now you have a mechanism to establish trust. You can sign some data, send it to the Azure Fluid Relay service, and the service can validate whether the
+<<<<<<< HEAD
 data is signed properly, and if so, it can trust it. Fortunately, there's an industry standard way method for encoding
+=======
+data is signed properly, and if so, it can trust it. Fortunately, there's an industry standard method for encoding
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 authentication and user-related data with a signature for verification: JSON Web Tokens (JWTs).
 
 ## JWTs and Azure Fluid Relay service
@@ -83,7 +87,11 @@ sign the token][1]. Fluid delegates the responsibility of creating and signing t
 
 [1]: (https://github.com/MicrosoftDocs/azure-fluid-preview-pr/blob/main/azure-fluid-relay-preview-pr/articles/howtos/fluid-jwtoken.md#how-can-you-generate-an-azure-fluid-relay-token)
 
+<<<<<<< HEAD
 {{% callout title="More information" %}}
+=======
+{{% callout note "More information" %}}
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 
 * [Introduction to JWTs](https://jwt.io/introduction)
 * [Payload claims in Azure Fluid Relay](https://github.com/MicrosoftDocs/azure-fluid-preview-pr/blob/main/azure-fluid-relay-preview-pr/articles/howtos/fluid-jwtoken.md#payload-claims)
@@ -107,7 +115,11 @@ generate tokens rather than signing them locally like the `InsecureTokenProvider
 
 ## Adding custom data to tokens
 
+<<<<<<< HEAD
 {{< unwritten-section >}}
+=======
+{{< placeholder >}}
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 
 ## Connecting user auth to Fluid service auth
 

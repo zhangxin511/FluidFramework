@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ define "header" }}
 {{ partial "header.html" . }}
 {{ end }}
@@ -35,5 +36,12 @@
 {{- if templates.Exists "partials/extra-foot.html" -}}
 {{ partial "extra-foot.html" . }}
 {{- end }}
+=======
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 
+{{ define "content" }}
+    {{ $status := default "_default" .Params.status }}
+    {{ $partialPathTemplate := "placeholders/__LAYOUT__.html" }}
+    {{ $partialPath := replace $partialPathTemplate "__LAYOUT__" $status }}
+    {{ partial $partialPath . }}
 {{ end }}

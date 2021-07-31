@@ -88,6 +88,7 @@ const fetchFunc = async (content, options) => {
     return remoteContent;
 };
 
+<<<<<<< HEAD
 const includeContent = (options) => {
     let fileContents = fs.readFileSync(options.path, "utf8");
     if (options.start || options.end) {
@@ -97,6 +98,22 @@ const includeContent = (options) => {
         fileContents = split.slice(options.start, options.end).join("\n");
     }
     return fileContents;
+=======
+const includeContent = (options, config) => {
+    try {
+        let fileContents = fs.readFileSync(options.path, "utf8");
+        if (options.start || options.end) {
+            options.start = options.start || 0;
+            options.end = options.end || undefined;
+            const split = fileContents.split(/\r?\n/);
+            fileContents = split.slice(options.start, options.end).join("\n");
+        }
+        return fileContents;
+    } catch (ex) {
+        console.error(`Exception processing "${config.originalPath}": ${ex}`);
+        throw ex;
+    }
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
 }
 
 /* markdown-magic config */
@@ -109,13 +126,21 @@ const mdMagicConfig = {
             // console.log(options.path);
             // options.path = pathLib.normalize(pathLib.join(getRepoRoot(), "docs", options.path));
             // const relPath = pathLib.relative(getRepoRoot(), path);
+<<<<<<< HEAD
             return includeContent(options);
+=======
+            return includeContent(options, config);
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
         },
         /* Match <!-- AUTO-GENERATED-CONTENT:START (INCLUDE_ROOT:path=../file.js) --> */
         // includes relative to the file calling the include
         INCLUDE_RELATIVE(content, options) {
             options.path = pathLib.normalize(pathLib.join(pathLib.dirname(config.originalPath), options.path));
+<<<<<<< HEAD
             return includeContent(options);
+=======
+            return includeContent(options, config);
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
         },
         /* Match <!-- AUTO-GENERATED-CONTENT:START (GET_STARTED) --> */
         GET_STARTED(content, options, config) {

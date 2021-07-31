@@ -63,7 +63,11 @@
     "@fluidframework/base-host": "^0.45.0",
     "@fluidframework/cell": "^0.45.0",
     "@fluidframework/common-definitions": "^0.20.1",
+<<<<<<< HEAD
     "@fluidframework/container-definitions": "^0.39.7",
+=======
+    "@fluidframework/container-definitions": "^0.39.8",
+>>>>>>> 687297debf858bea4c25f14a23796236414a3010
     "@fluidframework/container-loader": "^0.45.0",
     "@fluidframework/container-runtime": "^0.45.0",
     "@fluidframework/container-runtime-definitions": "^0.45.0",
