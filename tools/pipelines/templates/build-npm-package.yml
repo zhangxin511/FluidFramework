@@ -230,6 +230,9 @@ stages:
               workingDirectory: ${{ parameters.buildDirectory }}
               script: |
                 mkdir $(Build.ArtifactStagingDirectory)/pack/
+
+                mv -t $(Build.ArtifactStagingDirectory)/pack '${{ parameters.buildDirectory }}/buildOrder.txt'
+
                 mkdir $(Build.ArtifactStagingDirectory)/pack/scoped/
                 if [[ "${{ variables.publishNonScopedPackages }}" == "True" ]]; then
                   mkdir $(Build.ArtifactStagingDirectory)/pack/non-scoped/

@@ -8,7 +8,7 @@
   "author": "Microsoft and contributors",
   "scripts": {
     "build": "npm run policy-check && npm run layer-check && npm run build:genver && npm run build:compile && npm run lint && npm run build:docs",
-    "build:ci": "npm run build:genver && lerna run build:compile --stream",
+    "build:ci": "npm run build:genver && lerna run build:compile --stream && npm run toposort",
     "build:compile": "lerna run build:compile --stream",
     "build:docs": "lerna run build:docs --stream --parallel && npm run build:uber-package",
     "build:fast": "fluid-build --root .",
@@ -62,6 +62,7 @@
     "test:realsvc:report": "lerna run test:realsvc:report --stream --no-bail --no-sort",
     "test:report": "npm run test:mocha:report && npm run test:jest:report && npm run test:realsvc:report",
     "test:types": "lerna run test:types --stream --no-bail --no-sort",
+    "toposort": "lerna ls --toposort > buildOrder.txt",
     "tsc": "lerna run tsc --stream",
     "tsc:fast": "fluid-build  --root . -s tsc",
     "tsfmt": "lerna run tsfmt:fix --no-sort --stream --no-bail",

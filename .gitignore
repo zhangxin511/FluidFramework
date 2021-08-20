@@ -18,6 +18,7 @@ nyc
 bundleAnalysis
 
 # Misc pipeline artifacts
+buildOrder.txt
 artifacts
 
 docs/resources/_gen/
