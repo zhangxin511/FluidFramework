@@ -15,6 +15,7 @@ import { requestFluidObject } from "@fluidframework/runtime-utils";
 import { SharedObjectSequence } from "@fluidframework/sequence";
 import { describeNoCompat } from "@fluidframework/test-version-utils";
 import { ITestObjectProvider } from "@fluidframework/test-utils";
+// import { formSummarizerRequestFn } from "..\summaryManager.ts";
 
 const defaultDataStoreId = "default";
 
@@ -27,7 +28,7 @@ class TestDataObject extends DataObject {
 
 async function createContainer(
     provider: ITestObjectProvider,
-    summaryOpt: Omit<ISummaryRuntimeOptions, "generateSummaries">,
+    summaryOpt: ISummaryRuntimeOptions,
 ): Promise<IContainer> {
     const factory = new DataObjectFactory(TestDataObject.dataObjectName, TestDataObject, [
         SharedMap.getFactory(),
@@ -69,7 +70,18 @@ describeNoCompat("Summaries", (getTestObjectProvider) => {
         const container = await createContainer(provider, { disableIsolatedChannels: false });
         const defaultDataStore = await requestFluidObject<TestDataObject>(container, defaultDataStoreId);
         const containerRuntime = defaultDataStore.getContext().containerRuntime as ContainerRuntime;
-
+/*
+        const requestOptions: ISummarizerRequestOptions =
+        {
+            cache: false,
+            reconnect: false,
+            summarizingClient: true,
+        };
+        const requestSummarizerFn = formRequestSummarizerFn(
+            containerRuntime.context.loader,
+            (mockContext as IContainerContext).deltaManager.lastSequenceNumber,
+            requestOptions);
+*/
         await provider.ensureSynchronized();
 
         const { stats, summary } = await containerRuntime.summarize({

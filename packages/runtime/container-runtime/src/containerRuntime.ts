@@ -986,7 +986,17 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
         // Only create a SummaryManager if summaries are enabled and we are not the summarizer client
         if (this.summariesDisabled()) {
             this._logger.sendTelemetryEvent({ eventName: "SummariesDisabled" });
-        } else {
+        } else if (this.context.clientDetails.type === summarizerClientType) {
+            this._summarizer = new Summarizer(
+                "/_summarizer",
+                this /* ISummarizerRuntime */,
+                () => this.summaryConfiguration,
+                this /* ISummarizerInternalsProvider */,
+                this.IFluidHandleContext,
+                this.summaryCollection,
+                async (runtime: IConnectableRuntime) => RunWhileConnectedCoordinator.create(runtime),
+            );
+        } else if (SummarizerClientElection.clientDetailsPermitElection(this.context.clientDetails)) {
             const maxOpsSinceLastSummary = this.runtimeOptions.summaryOptions.maxOpsSinceLastSummary ?? 7000;
             const defaultAction = () => {
                 if (this.summaryCollection.opsSinceLastAck > maxOpsSinceLastSummary) {
@@ -1027,47 +1037,35 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
                 summarizerClientElectionEnabled,
             );
 
-            if (this.context.clientDetails.type === summarizerClientType) {
-                this._summarizer = new Summarizer(
-                    "/_summarizer",
-                    this /* ISummarizerRuntime */,
-                    () => this.summaryConfiguration,
-                    this /* ISummarizerInternalsProvider */,
-                    this.IFluidHandleContext,
-                    this.summaryCollection,
-                    async (runtime: IConnectableRuntime) => RunWhileConnectedCoordinator.create(runtime),
-                );
-            } else if (SummarizerClientElection.clientDetailsPermitElection(this.context.clientDetails)) {
-                // Create the SummaryManager and mark the initial state
-                const requestOptions: ISummarizerRequestOptions =
-                    {
-                        cache: false,
-                        reconnect: false,
-                        summarizingClient: true,
-                    };
-                this.summaryManager = new SummaryManager(
-                    this.summarizerClientElection,
-                    this, // IConnectedState
-                    this.summaryCollection,
-                    this.logger,
-                    formRequestSummarizerFn(
-                        this.context.loader,
-                        this.context.deltaManager.lastSequenceNumber,
-                        requestOptions),
-                    new Throttler(
-                        60 * 1000, // 60 sec delay window
-                        30 * 1000, // 30 sec max delay
-                        // throttling function increases exponentially (0ms, 40ms, 80ms, 160ms, etc)
-                        formExponentialFn({ coefficient: 20, initialDelay: 0 }),
-                    ),
-                    {
-                        initialDelayMs: this.runtimeOptions.summaryOptions.initialSummarizerDelayMs,
-                    },
-                    this.runtimeOptions.summaryOptions.summarizerOptions,
-                );
-                this.summaryManager.on("summarizerWarning", this.raiseContainerWarning);
-                this.summaryManager.start();
-            }
+            // Create the SummaryManager and mark the initial state
+            const requestOptions: ISummarizerRequestOptions =
+            {
+                cache: false,
+                reconnect: false,
+                summarizingClient: true,
+            };
+            this.summaryManager = new SummaryManager(
+                this.summarizerClientElection,
+                this, // IConnectedState
+                this.summaryCollection,
+                this.logger,
+                formRequestSummarizerFn(
+                    this.context.loader,
+                    this.context.deltaManager.lastSequenceNumber,
+                    requestOptions),
+                new Throttler(
+                    60 * 1000, // 60 sec delay window
+                    30 * 1000, // 30 sec max delay
+                    // throttling function increases exponentially (0ms, 40ms, 80ms, 160ms, etc)
+                    formExponentialFn({ coefficient: 20, initialDelay: 0 }),
+                ),
+                {
+                    initialDelayMs: this.runtimeOptions.summaryOptions.initialSummarizerDelayMs,
+                },
+                this.runtimeOptions.summaryOptions.summarizerOptions,
+            );
+            this.summaryManager.on("summarizerWarning", this.raiseContainerWarning);
+            this.summaryManager.start();
         }
 
         this.deltaManager.on("readonly", (readonly: boolean) => {

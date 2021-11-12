@@ -13,17 +13,30 @@ import {
 import { IContainerContext } from "@fluidframework/container-definitions";
 import { MockDeltaManager, MockQuorum } from "@fluidframework/test-runtime-utils";
 import { ContainerRuntime, ScheduleManager } from "../containerRuntime";
+import { ISummarizer } from "..";
+import { formRequestSummarizerFn, ISummarizerRequestOptions } from "../summaryManager";
 
 describe("Runtime", () => {
     describe("Container Runtime", () => {
         describe("ContainerRuntime", () => {
             describe("orderSequentially", () => {
                 let containerRuntime: ContainerRuntime;
+                let summarizer: ISummarizer;
                 const mockContext: Partial<IContainerContext> = {
                     deltaManager: new MockDeltaManager(),
                     quorum: new MockQuorum(),
                     logger: new MockLogger(),
                 };
+                const requestOptions: ISummarizerRequestOptions =
+                {
+                    cache: false,
+                    reconnect: false,
+                    summarizingClient: true,
+                };
+                const requestSummarizerFn = formRequestSummarizerFn(
+                    (mockContext as IContainerContext).loader,
+                    (mockContext as IContainerContext).deltaManager.lastSequenceNumber,
+                    requestOptions);
 
                 beforeEach(async () => {
                     containerRuntime = await ContainerRuntime.load(
@@ -36,6 +49,11 @@ describe("Runtime", () => {
                             },
                         },
                     );
+                    summarizer = await requestSummarizerFn();
+                });
+
+                afterEach(async () => {
+                    summarizer.summarizeOnDemand({ reason: "test" });
                 });
 
                 it("Can't call flush() inside orderSequentially's callback", () => {
