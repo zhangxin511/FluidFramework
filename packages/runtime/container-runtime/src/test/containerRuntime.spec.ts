@@ -12,9 +12,11 @@ import {
 } from "@fluidframework/protocol-definitions";
 import { IContainerContext } from "@fluidframework/container-definitions";
 import { MockDeltaManager, MockQuorum } from "@fluidframework/test-runtime-utils";
-import { ContainerRuntime, ScheduleManager } from "../containerRuntime";
+import { ContainerRuntime,
+    ScheduleManager,
+    formRequestSummarizerFn,
+    ISummarizerRequestOptions } from "../containerRuntime";
 import { ISummarizer } from "..";
-import { formRequestSummarizerFn, ISummarizerRequestOptions } from "../summaryManager";
 
 describe("Runtime", () => {
     describe("Container Runtime", () => {

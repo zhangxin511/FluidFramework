@@ -33,6 +33,7 @@ import { IFluidRouter } from '@fluidframework/core-interfaces';
 import { IFluidSerializer } from '@fluidframework/core-interfaces';
 import { IFluidTokenProvider } from '@fluidframework/container-definitions';
 import { IGarbageCollectionData } from '@fluidframework/runtime-definitions';
+import { ILoader } from '@fluidframework/container-definitions';
 import { ILoaderOptions } from '@fluidframework/container-definitions';
 import { IQuorum } from '@fluidframework/protocol-definitions';
 import { IRequest } from '@fluidframework/core-interfaces';
@@ -144,6 +145,8 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
     get isDirty(): boolean;
     static load(context: IContainerContext, registryEntries: NamedFluidDataStoreRegistryEntries, requestHandler?: (request: IRequest, runtime: IContainerRuntime) => Promise<IResponse>, runtimeOptions?: IContainerRuntimeOptions, containerScope?: IFluidObject, existing?: boolean): Promise<ContainerRuntime>;
     // (undocumented)
+    get loader(): ILoader;
+    // (undocumented)
     readonly logger: ITelemetryLogger;
     // (undocumented)
     get options(): ILoaderOptions;
@@ -239,6 +242,9 @@ export class FluidDataStoreRegistry implements IFluidDataStoreRegistry {
     // (undocumented)
     get IFluidDataStoreRegistry(): this;
     }
+
+// @public
+export const formRequestSummarizerFn: (loaderRouter: IFluidRouter, lastSequenceNumber: number, { cache, reconnect, summarizingClient }: ISummarizerRequestOptions) => () => Promise<ISummarizer>;
 
 // @public
 export interface IAckedSummary {
@@ -519,6 +525,16 @@ export interface ISummarizerInternalsProvider {
 // @public
 export interface ISummarizerOptions {
     disableHeuristics: boolean;
+}
+
+// @public (undocumented)
+export interface ISummarizerRequestOptions {
+    // (undocumented)
+    cache: boolean;
+    // (undocumented)
+    reconnect: boolean;
+    // (undocumented)
+    summarizingClient: boolean;
 }
 
 // @public (undocumented)

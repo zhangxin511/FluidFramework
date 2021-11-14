@@ -25,7 +25,9 @@ import {
     ContainerWarning,
     ICriticalContainerError,
     AttachState,
+    ILoader,
     ILoaderOptions,
+    LoaderHeader,
 } from "@fluidframework/container-definitions";
 import {
     IContainerRuntime,
@@ -44,7 +46,7 @@ import {
     normalizeError,
     TaggedLoggerAdapter,
 } from "@fluidframework/telemetry-utils";
-import { IDocumentStorageService, ISummaryContext } from "@fluidframework/driver-definitions";
+import { DriverHeader, IDocumentStorageService, ISummaryContext } from "@fluidframework/driver-definitions";
 import { readAndParse, BlobAggregationStorage } from "@fluidframework/driver-utils";
 import { DataCorruptionError, GenericError, extractSafePropertiesFromMessage } from "@fluidframework/container-utils";
 import {
@@ -93,6 +95,7 @@ import {
     RequestParser,
     create404Response,
     exceptionToResponse,
+    requestFluidObject,
     responseToException,
     seqFromTree,
 } from "@fluidframework/runtime-utils";
@@ -100,7 +103,7 @@ import { v4 as uuid } from "uuid";
 import { ContainerFluidHandleContext } from "./containerHandleContext";
 import { FluidDataStoreRegistry } from "./dataStoreRegistry";
 import { Summarizer } from "./summarizer";
-import { formRequestSummarizerFn, ISummarizerRequestOptions, SummaryManager } from "./summaryManager";
+import { SummaryManager } from "./summaryManager";
 import { DeltaScheduler } from "./deltaScheduler";
 import { ReportOpPerfTelemetry } from "./connectionTelemetry";
 import { IPendingLocalState, PendingStateManager } from "./pendingStateManager";
@@ -778,6 +781,10 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
         return this.context.attachState;
     }
 
+    public get loader(): ILoader {
+        return this.context.loader;
+    }
+
     // Back compat: 0.28, can be removed in 0.29
     public readonly IFluidSerializer: IFluidSerializer;
 
@@ -984,9 +991,7 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
         this.summaryCollection = new SummaryCollection(this.deltaManager, this.logger);
 
         // Only create a SummaryManager if summaries are enabled and we are not the summarizer client
-        if (this.summariesDisabled()) {
-            this._logger.sendTelemetryEvent({ eventName: "SummariesDisabled" });
-        } else if (this.context.clientDetails.type === summarizerClientType) {
+        if (this.context.clientDetails.type === summarizerClientType) {
             this._summarizer = new Summarizer(
                 "/_summarizer",
                 this /* ISummarizerRuntime */,
@@ -996,6 +1001,8 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
                 this.summaryCollection,
                 async (runtime: IConnectableRuntime) => RunWhileConnectedCoordinator.create(runtime),
             );
+        } else if (this.summariesDisabled()) {
+            this._logger.sendTelemetryEvent({ eventName: "SummariesDisabled" });
         } else if (SummarizerClientElection.clientDetailsPermitElection(this.context.clientDetails)) {
             const maxOpsSinceLastSummary = this.runtimeOptions.summaryOptions.maxOpsSinceLastSummary ?? 7000;
             const defaultAction = () => {
@@ -2326,3 +2333,47 @@ const waitForSeq = async (
     };
     deltaManager.on("op", handleOp);
 });
+
+export interface ISummarizerRequestOptions {
+    cache: boolean,
+    reconnect: boolean,
+    summarizingClient: boolean,
+}
+
+/**
+ * Forms a function that will request a Summarizer.
+ * @param loaderRouter - the loader acting as an IFluidRouter
+ * @param lastSequenceNumber - the last sequence number (e.g., from DeltaManager)
+ * @param cache - use cache to retrieve summarizer
+ * @param summarizingClient - is summarizer client
+ * @param reconnect - can reconnect on connection loss
+ */
+export const formRequestSummarizerFn = (
+    loaderRouter: IFluidRouter,
+    lastSequenceNumber: number,
+    { cache, reconnect, summarizingClient }: ISummarizerRequestOptions,
+) => async () => {
+    // TODO eventually we may wish to spawn an execution context from which to run this
+    const request: IRequest = {
+        headers: {
+            [LoaderHeader.cache]: cache,
+            [LoaderHeader.clientDetails]: {
+                capabilities: { interactive: false },
+                type: summarizerClientType,
+            },
+            [DriverHeader.summarizingClient]: summarizingClient,
+            [LoaderHeader.reconnect]: reconnect,
+            [LoaderHeader.sequenceNumber]: lastSequenceNumber,
+        },
+        url: "/_summarizer",
+    };
+
+    const fluidObject = await requestFluidObject(loaderRouter, request);
+    const summarizer = fluidObject.ISummarizer;
+
+    if (!summarizer) {
+        return Promise.reject(new Error("Fluid object does not implement ISummarizer"));
+    }
+
+    return summarizer;
+};

@@ -6,7 +6,10 @@
 import { ContainerRuntimeFactoryWithDefaultDataStore, DataObject, DataObjectFactory } from "@fluidframework/aqueduct";
 import { assert, bufferToString, TelemetryNullLogger } from "@fluidframework/common-utils";
 import { IContainer } from "@fluidframework/container-definitions";
-import { ContainerRuntime, ISummaryRuntimeOptions } from "@fluidframework/container-runtime";
+import { ContainerRuntime,
+    ISummaryRuntimeOptions,
+    formRequestSummarizerFn,
+    ISummarizerRequestOptions } from "@fluidframework/container-runtime";
 import { SharedDirectory, SharedMap } from "@fluidframework/map";
 import { SharedMatrix } from "@fluidframework/matrix";
 import { ISummaryBlob, SummaryType } from "@fluidframework/protocol-definitions";
@@ -15,7 +18,6 @@ import { requestFluidObject } from "@fluidframework/runtime-utils";
 import { SharedObjectSequence } from "@fluidframework/sequence";
 import { describeNoCompat } from "@fluidframework/test-version-utils";
 import { ITestObjectProvider } from "@fluidframework/test-utils";
-// import { formSummarizerRequestFn } from "..\summaryManager.ts";
 
 const defaultDataStoreId = "default";
 
@@ -70,7 +72,7 @@ describeNoCompat("Summaries", (getTestObjectProvider) => {
         const container = await createContainer(provider, { disableIsolatedChannels: false });
         const defaultDataStore = await requestFluidObject<TestDataObject>(container, defaultDataStoreId);
         const containerRuntime = defaultDataStore.getContext().containerRuntime as ContainerRuntime;
-/*
+
         const requestOptions: ISummarizerRequestOptions =
         {
             cache: false,
@@ -78,11 +80,15 @@ describeNoCompat("Summaries", (getTestObjectProvider) => {
             summarizingClient: true,
         };
         const requestSummarizerFn = formRequestSummarizerFn(
-            containerRuntime.context.loader,
-            (mockContext as IContainerContext).deltaManager.lastSequenceNumber,
+            containerRuntime.loader,
+            containerRuntime.deltaManager.lastSequenceNumber,
             requestOptions);
-*/
+
         await provider.ensureSynchronized();
+
+        const summarizer = await requestSummarizerFn();
+
+        summarizer.summarizeOnDemand({ reason: "test" });
 
         const { stats, summary } = await containerRuntime.summarize({
             runGC: false,
