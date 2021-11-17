@@ -889,7 +889,7 @@ export class ContainerRuntime extends TypedEventEmitter<IContainerRuntimeEvents>
         return this._summarizer;
     }
 
-    public get summariesDisabled(): boolean {
+    private get summariesDisabled(): boolean {
         return this.runtimeOptions.summaryOptions.generateSummaries === false;
     }
 
