@@ -93,6 +93,7 @@ export class AlfredResources implements core.IResources {
         public documentsCollectionName: string,
         public metricClientConfig: any,
         public globalDbMongoManager?: core.MongoManager,
+        public throttleStorageManager: core.IThrottleStorageManager,
     ) {
         const socketIoAdapterConfig = config.get("alfred:socketIoAdapter");
         const httpServerConfig: services.IHttpServerConfig = config.get("system:httpServer");
@@ -350,7 +351,8 @@ export class AlfredResourcesFactory implements core.IResourcesFactory<AlfredReso
             port,
             documentsCollectionName,
             metricClientConfig,
-            globalDbMongoManager);
+            globalDbMongoManager,
+            throttleStorageManager);
     }
 }
 
@@ -372,6 +374,7 @@ export class AlfredRunnerFactory implements core.IRunnerFactory<AlfredResources>
             resources.mongoManager,
             resources.producer,
             resources.metricClientConfig,
-            resources.globalDbMongoManager);
+            resources.globalDbMongoManager,
+            resources.throttleStorageManager);
     }
 }

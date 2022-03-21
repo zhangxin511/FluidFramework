@@ -6,8 +6,12 @@
 import {
     IThrottleStorageManager,
     IThrottlingMetrics,
+    IUsageData,
 } from "@fluidframework/server-services-core";
-import { executeRedisMultiWithHmsetExpire, IRedisParameters } from "@fluidframework/server-services-utils";
+import { executeRedisMultiWithHmsetExpire,
+         executeRedisMultiWithHmsetLpushExpire,
+         executeRedisMultiWithLpushExpire,
+         IRedisParameters } from "@fluidframework/server-services-utils";
 import { Redis } from "ioredis";
 import * as winston from "winston";
 import { CommonProperties, Lumberjack } from "@fluidframework/server-services-telemetry";
@@ -17,7 +21,8 @@ import { CommonProperties, Lumberjack } from "@fluidframework/server-services-te
  */
 export class RedisThrottleStorageManager implements IThrottleStorageManager {
     private readonly expireAfterSeconds: number = 60 * 60 * 24;
-    private readonly prefix: string = "throttle";
+    private readonly throttlingPrefix: string = "throttle";
+    private readonly usagePrefix: string = "usage";
 
     constructor(
         private readonly client: Redis,
@@ -27,7 +32,7 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
         }
 
         if (parameters?.prefix) {
-            this.prefix = parameters.prefix;
+            this.throttlingPrefix = parameters.prefix;
         }
 
         client.on("error", (error) => {
@@ -43,19 +48,47 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
         id: string,
         throttlingMetric: IThrottlingMetrics,
     ): Promise<void> {
-        const key = this.getKey(id);
+        const throttlingKey = this.getThrottlingKey(id);
 
-        winston.info(`Writing throttling data to Redis: key - ${key},
-         expiryTimeSeconds: ${this.expireAfterSeconds}, ${JSON.stringify(throttlingMetric)}`);
         return executeRedisMultiWithHmsetExpire(
             this.client,
-            key,
+            throttlingKey,
             throttlingMetric as { [key: string]: any },
             this.expireAfterSeconds);
     }
 
+    public async setThrottlingMetricAndUsageData(
+        id: string,
+        throttlingMetric: IThrottlingMetrics,
+        usageData: IUsageData,
+    ): Promise<void> {
+        const throttlingKey = this.getThrottlingKey(id);
+        const usageKey = this.getUsageKey(id);
+
+        return executeRedisMultiWithHmsetLpushExpire(
+            this.client,
+            throttlingKey,
+            throttlingMetric as { [key: string]: any },
+            usageKey,
+            usageData,
+            this.expireAfterSeconds);
+    }
+
+    public async setUsageData(
+        id: string,
+        usageData: IUsageData,
+    ): Promise<void> {
+        const usageKey = this.getUsageKey(id);
+
+        return executeRedisMultiWithLpushExpire(
+            this.client,
+            usageKey,
+            usageData,
+            this.expireAfterSeconds);
+    }
+
     public async getThrottlingMetric(id: string): Promise<IThrottlingMetrics | undefined> {
-        const throttlingMetricRedis = await this.client.hgetall(this.getKey(id));
+        const throttlingMetricRedis = await this.client.hgetall(this.getThrottlingKey(id));
         if (Object.keys(throttlingMetricRedis).length === 0) {
             return undefined;
         }
@@ -68,17 +101,15 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
             throttleReason: throttlingMetricRedis.throttleReason,
             retryAfterInMs: Number.parseInt(throttlingMetricRedis.retryAfterInMs, 10),
         };
-
-        for (const [key, value] of Object.entries(throttlingMetricRedis)) {
-            if (key.startsWith("usage_count_")) {
-                throttlingMetric[key] = Number.parseInt(value, 10)
-            }
-        }
         
         return throttlingMetric;
     }
 
-    private getKey(id: string): string {
-        return `${this.prefix}:${id}`;
+    private getThrottlingKey(id: string): string {
+        return `${this.throttlingPrefix}:${id}`;
+    }
+
+    private getUsageKey(id: string): string {
+        return `${this.usagePrefix}:${id}`;
     }
 }

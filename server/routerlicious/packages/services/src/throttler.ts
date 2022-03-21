@@ -97,9 +97,6 @@ export class Throttler implements IThrottler {
             this.lastThrottleUpdateAtMap.set(id, now);
         }
         
-        this.logger?.info(`Evaluating throttling for: ${id}, now-lastThrottleUpdateAtMap:
-         ${now - this.lastThrottleUpdateAtMap.get(id)}, minThrottleIntervalInMs: ${this.minThrottleIntervalInMs}`);
-        
         if (now - this.lastThrottleUpdateAtMap.get(id) > this.minThrottleIntervalInMs) {
             const countDelta = this.countDeltaMap.get(id);
             this.lastThrottleUpdateAtMap.set(id, now);
@@ -114,8 +111,6 @@ export class Throttler implements IThrottler {
                 [ThrottlingTelemetryProperties.key]: id,
                 [ThrottlingTelemetryProperties.weight]: countDelta,
             };
-
-            this.logger?.info(`Running throttlerHelper.updateCount(${id}, ${countDelta})`);
 
             await this.throttlerHelper.updateCount(id, countDelta)
                 .then((throttlerResponse) => {

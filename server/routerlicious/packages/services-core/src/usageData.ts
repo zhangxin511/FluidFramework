@@ -3,11 +3,6 @@
  * Licensed under the MIT License.
  */
 
-export interface IUsageEmitter {
-    emit(usageData: UsageData): void;
-    getUsageCounts(): void;
- } 
- 
  export enum MeterType {
      OpsIn,
      OpsOut,
@@ -15,9 +10,10 @@ export interface IUsageEmitter {
      StorageSpaceUsedInGB
  }
 
- export interface UsageData {
+ export interface IUsageData {
      type: MeterType,
      value: number,
      tenantId: string,
-     documentId: string
+     documentId: string,
+     clientId: string
  }

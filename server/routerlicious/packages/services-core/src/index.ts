@@ -30,5 +30,5 @@ export * from "./taskMessages";
 export * from "./tenant";
 export * from "./throttler";
 export * from "./token";
-export * from "./usageEmitter";
+export * from "./usageData";
 export * from "./zookeeper";

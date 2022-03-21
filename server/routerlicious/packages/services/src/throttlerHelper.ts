@@ -9,7 +9,6 @@ import {
     IThrottleStorageManager,
     IThrottlingMetrics,
 } from "@fluidframework/server-services-core";
-import winston from "winston";
 
 /**
  * Implements the Token Bucket algorithm to calculate rate-limiting for throttling operations.
@@ -39,11 +38,6 @@ export class ThrottlerHelper implements IThrottlerHelper {
                 retryAfterInMs: 0,
             };
         }
-
-        throttlingMetric[`usage_count_${now.toString()}`] = count;
-
-        winston.info(`Inside ThrottlerHelper.updateCount(). Writing throttlingMetric:
-         ${JSON.stringify(throttlingMetric)} to Redis hash key: ${id}`);
 
         // Exit early if already throttled and no chance of being unthrottled
         const retryAfterInMs = this.getRetryAfterInMs(throttlingMetric, now);
