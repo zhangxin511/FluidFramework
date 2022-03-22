@@ -19,6 +19,7 @@ import {
     IProducer,
     IServiceConfiguration,
     ITenantManager,
+    LambdaCloseType,
     MongoManager,
 } from "@fluidframework/server-services-core";
 import { generateServiceProtocolEntries } from "@fluidframework/protocol-base";
@@ -56,7 +57,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
         private readonly forwardProducer: IProducer,
         private readonly reverseProducer: IProducer,
         private readonly serviceConfiguration: IServiceConfiguration,
-        globalDbMongoManager?: MongoManager) {
+        private readonly globalDbMongoManager?: MongoManager) {
         super();
     }
 
@@ -124,7 +125,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
                     lastCheckpoint.logOffset = -1;
                     lastCheckpoint.epoch = leaderEpoch;
                     context.log?.info(`Deli checkpoint from summary:
-                        ${ JSON.stringify(lastCheckpoint)}`, { messageMetaData });
+                        ${JSON.stringify(lastCheckpoint)}`, { messageMetaData });
                 }
             } else {
                 lastCheckpoint = JSON.parse(dbObject.deli);
@@ -152,7 +153,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
         const checkpointManager = createDeliCheckpointManagerFromCollection(tenantId, documentId, this.collection);
 
         // Should the lambda reaize that term has flipped to send a no-op message at the beginning?
-        return new DeliLambda(
+        const deliLambda = new DeliLambda(
             context,
             tenantId,
             documentId,
@@ -164,14 +165,38 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
             this.serviceConfiguration,
             sessionMetric,
             sessionStartMetric);
+
+        deliLambda.on("close", (closeType) => {
+            const handler = async () => {
+                if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)
+                    && this.globalDbMongoManager !== undefined) {
+                    const result = await this.collection.findOne({ documentId });
+                    const sessionP = result?.session;
+                    if (sessionP !== undefined) {
+                        sessionP.isSessionAlive = false;
+                        await this.collection.update(
+                            {
+                                documentId,
+                            },
+                            {
+                                session: sessionP,
+                            },
+                            {});
+                    }
+                }
+            };
+            void handler();
+        });
+
+        return deliLambda;
     }
 
     private logSessionFailureMetrics(
         sessionMetric: Lumber<LumberEventName.SessionResult> | undefined,
         sessionStartMetric: Lumber<LumberEventName.StartSessionResult> | undefined,
         errMsg: string) {
-            sessionMetric?.error(errMsg);
-            sessionStartMetric?.error(errMsg);
+        sessionMetric?.error(errMsg);
+        sessionStartMetric?.error(errMsg);
     }
 
     public async dispose(): Promise<void> {
