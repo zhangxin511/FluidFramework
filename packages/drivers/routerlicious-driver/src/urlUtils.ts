@@ -20,21 +20,24 @@ export const parseFluidUrl = (fluidUrl: string): URLParse => {
 export const replaceDocumentIdInPath = (urlPath: string, documentId: string): string =>
     urlPath.split("/").slice(0, -1).concat([documentId]).join("/");
 
-export const replaceDomainInPath = (domain: string, domainReplaced: string, url: string): string => {
-    return url.replace(domainReplaced, domain);
-};
+// export const replaceDomainInPath = (domain: string, domainReplaced: string, url: string): string => {
+//     return url.replace(domainReplaced, domain);
+// };
 
 export const createFluidUrl = (domain: string, pathname: string): string =>
-        "fluid://".concat(domain).concat(pathname);
+    "fluid://".concat(domain).concat(pathname);
 
 export const replaceFluidUrl = (resolvedUrl: IFluidResolvedUrl, session: ISession, parsedUrl: URLParse): void => {
-    if (session.ordererUrl.includes("alfred")) {
-        resolvedUrl.url = createFluidUrl(session.ordererUrl, parsedUrl.pathname);
-        resolvedUrl.endpoints.ordererUrl = replaceDomainInPath(session.ordererUrl, parsedUrl.host,
-                                                                resolvedUrl.endpoints.ordererUrl);
-        resolvedUrl.endpoints.deltaStorageUrl = replaceDomainInPath(session.ordererUrl, parsedUrl.host,
-                                                                    resolvedUrl.endpoints.deltaStorageUrl);
-        resolvedUrl.endpoints.storageUrl = replaceDomainInPath(session.historianUrl, parsedUrl.host,
-                                                                resolvedUrl.endpoints.storageUrl);
+    if (session.ordererUrl.includes("https")) {
+        const replacementOrderUrl = new URL(session.ordererUrl);
+        const replaceHistorianUrl = new URL(session.historianUrl);
+        const deltaStorageUrl = new URL(resolvedUrl.endpoints.deltaStorageUrl);
+        const storageUrl = new URL(resolvedUrl.endpoints.storageUrl);
+        deltaStorageUrl.host = replacementOrderUrl.host;
+        storageUrl.host = replaceHistorianUrl.host;
+        resolvedUrl.url = createFluidUrl(session.ordererUrl.replace(/^https?:\/\//, ""), parsedUrl.pathname);
+        resolvedUrl.endpoints.ordererUrl = session.ordererUrl;
+        resolvedUrl.endpoints.deltaStorageUrl = deltaStorageUrl.toString();
+        resolvedUrl.endpoints.storageUrl = storageUrl.toString();
     }
 };

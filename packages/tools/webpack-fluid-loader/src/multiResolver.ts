@@ -43,7 +43,7 @@ function getUrlResolver(options: RouteOptions): IUrlResolver {
                 return new InsecureUrlResolver(
                     "",
                     options.discoveryEndpoint,
-                    "",
+                    "https://dummy-historian",
                     options.tenantId,
                     options.bearerSecret);
             }
