@@ -20,14 +20,12 @@ export const parseFluidUrl = (fluidUrl: string): URLParse => {
 export const replaceDocumentIdInPath = (urlPath: string, documentId: string): string =>
     urlPath.split("/").slice(0, -1).concat([documentId]).join("/");
 
-// export const replaceDomainInPath = (domain: string, domainReplaced: string, url: string): string => {
-//     return url.replace(domainReplaced, domain);
-// };
-
 export const createFluidUrl = (domain: string, pathname: string): string =>
     "fluid://".concat(domain).concat(pathname);
 
-export const replaceFluidUrl = (resolvedUrl: IFluidResolvedUrl, session: ISession, parsedUrl: URLParse): void => {
+export const replaceWithDiscoveryUrl = (resolvedUrl: IFluidResolvedUrl,
+    session: ISession,
+    parsedUrl: URLParse): void => {
     if (session.ordererUrl.includes("https")) {
         const replacementOrderUrl = new URL(session.ordererUrl);
         const replaceHistorianUrl = new URL(session.historianUrl);

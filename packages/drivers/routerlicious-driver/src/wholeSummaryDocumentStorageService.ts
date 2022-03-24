@@ -49,9 +49,7 @@ export class WholeSummaryDocumentStorageService implements IDocumentStorageServi
         protected readonly logger: ITelemetryLogger,
         public readonly policies: IDocumentStorageServicePolicies = {},
         private readonly blobCache: ICache<ArrayBufferLike> = new InMemoryCache(),
-        private readonly snapshotTreeCache: ICache<ISnapshotTreeVersion> = new InMemoryCache(),
-        private readonly hasSessionLocationChanged?: boolean,
-        private readonly isSessionAlive?: boolean) {
+        private readonly snapshotTreeCache: ICache<ISnapshotTreeVersion> = new InMemoryCache()) {
         this.summaryUploadManager = new WholeSummaryUploadManager(manager);
     }
 
@@ -67,11 +65,7 @@ export class WholeSummaryDocumentStorageService implements IDocumentStorageServi
         // Fetch latest summary, cache it, and return its id.
         if (this.firstVersionsCall && count === 1) {
             this.firstVersionsCall = false;
-            const disableCache: boolean = (this.hasSessionLocationChanged !== undefined
-                && this.hasSessionLocationChanged) ||
-                (this.hasSessionLocationChanged !== undefined && !this.hasSessionLocationChanged &&
-                    this.isSessionAlive !== undefined && this.isSessionAlive);
-            const { id: _id, snapshotTree } = await this.fetchAndCacheSnapshotTree(latestSnapshotId, disableCache);
+            const { id: _id, snapshotTree } = await this.fetchAndCacheSnapshotTree(latestSnapshotId, true);
             return [{
                 id: _id,
                 treeId: snapshotTree.id!,

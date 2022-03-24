@@ -208,7 +208,7 @@ export class RestGitService {
     public async createSummary(summaryParams: IWholeSummaryPayload): Promise<IWriteSummaryResponse> {
         const summaryResponse = await this.post<IWholeFlatSummary | IWriteSummaryResponse>(
             `/repos/${this.getRepoPath()}/git/summaries`,
-             summaryParams);
+            summaryParams);
         if (summaryParams.type === "container" && (summaryResponse as IWholeFlatSummary).trees !== undefined) {
             // Cache the written summary for future retrieval. If this fails, next summary retrieval
             // will receive an older version, but that is OK. Client will catch up with ops.
@@ -235,7 +235,7 @@ export class RestGitService {
     }
 
     public async getSummary(sha: string, useCache: boolean): Promise<IWholeFlatSummary> {
-        return this.resolve(
+        return this.resolveSummary(
             // Currently, only "container" type summaries are retrieved from storage.
             // In the future, we might want to also retrieve "channels". When that happens,
             // our APIs will change so we specify what type we want to retrieve during
@@ -362,8 +362,7 @@ export class RestGitService {
             useCache);
     }
 
-    private getStorageRoutingHeaderValue()
-    {
+    private getStorageRoutingHeaderValue() {
         return `${this.tenantId}:${this.documentId}`;
     }
 
@@ -434,7 +433,7 @@ export class RestGitService {
     /**
      * Deletes the given key from the cache. Will log any errors with the cache.
      */
-     private deleteFromCache(key: string): void {
+    private deleteFromCache(key: string): void {
         if (this.cache) {
             // Attempt to delete the key from Redis - log any errors but don't fail
             this.cache.delete(key).catch((error) => {
@@ -458,12 +457,44 @@ export class RestGitService {
                 Lumberjack.info(`Resolving ${key} from cache`, this.lumberProperties);
                 return cachedValue;
             }
+
+            // Value is not cached - fetch it with the provided function and then cache the value
+            winston.info(`Fetching ${key}`);
+            Lumberjack.info(`Fetching ${key}`, this.lumberProperties);
+            const value = await fetch();
+            this.setCache(key, value);
+
+            return value;
+        } else {
+            return fetch();
         }
-        // Value is not cached - fetch it with the provided function and then cache the value
+    }
+
+    private async resolveSummary<T>(key: string, fetch: () => Promise<T>, useCache: boolean): Promise<T> {
+        if (this.cache && useCache) {
+            // Attempt to grab the value from the cache. Log any errors but don't fail the request
+            const cachedValue: T | undefined = await this.cache.get<T>(key).catch((error) => {
+                winston.error(`Error fetching ${key} from cache`, error);
+                Lumberjack.error(`Error fetching ${key} from cache`, this.lumberProperties, error);
+                return undefined;
+            });
+
+            if (cachedValue) {
+                winston.info(`Resolving ${key} from cache`);
+                Lumberjack.info(`Resolving ${key} from cache`, this.lumberProperties);
+                return cachedValue;
+            }
+        }
+        /**
+         * We need to cache the latest summary regardless of the useCache flag. When we fetch the summary at the first time,
+         * we need to update the cache. If not, the following calls with useCache enabled might read the outdated summary from cache in case of
+         * the historian service change.
+         */
         winston.info(`Fetching ${key}`);
         Lumberjack.info(`Fetching ${key}`, this.lumberProperties);
         const value = await fetch();
         this.setCache(key, value);
+        return value;
     }
 
     private getSummaryCacheKey(type: IWholeSummaryPayloadType): string {

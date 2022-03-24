@@ -37,8 +37,6 @@ export class DocumentService implements api.IDocumentService {
         private readonly driverPolicies: IRouterliciousDriverPolicies,
         private readonly blobCache: ICache<ArrayBufferLike>,
         private readonly snapshotTreeCache: ICache<ISnapshotTreeVersion>,
-        private readonly hasSessionLocationChanged?: boolean,
-        private readonly isSessionAlive?: boolean,
     ) {
     }
 
@@ -97,9 +95,7 @@ export class DocumentService implements api.IDocumentService {
             documentStorageServicePolicies,
             this.driverPolicies,
             this.blobCache,
-            this.snapshotTreeCache,
-            this.hasSessionLocationChanged,
-            this.isSessionAlive);
+            this.snapshotTreeCache);
         return this.documentStorageService;
     }
 

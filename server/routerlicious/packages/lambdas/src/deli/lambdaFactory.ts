@@ -56,8 +56,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
         private readonly tenantManager: ITenantManager,
         private readonly forwardProducer: IProducer,
         private readonly reverseProducer: IProducer,
-        private readonly serviceConfiguration: IServiceConfiguration,
-        private readonly globalDbMongoManager?: MongoManager) {
+        private readonly serviceConfiguration: IServiceConfiguration) {
         super();
     }
 
@@ -168,8 +167,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
 
         deliLambda.on("close", (closeType) => {
             const handler = async () => {
-                if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)
-                    && this.globalDbMongoManager !== undefined) {
+                if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)) {
                     const result = await this.collection.findOne({ documentId });
                     const sessionP = result?.session;
                     if (sessionP !== undefined) {

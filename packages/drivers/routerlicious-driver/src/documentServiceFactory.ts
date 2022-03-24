@@ -23,10 +23,11 @@ import { IRouterliciousDriverPolicies } from "./policies";
 import { ITokenProvider } from "./tokens";
 import { RouterliciousOrdererRestWrapper } from "./restWrapper";
 import { convertSummaryToCreateNewSummary } from "./createNewUtils";
-import { parseFluidUrl, replaceDocumentIdInPath, replaceFluidUrl } from "./urlUtils";
+import { parseFluidUrl, replaceDocumentIdInPath, replaceWithDiscoveryUrl } from "./urlUtils";
 import { InMemoryCache } from "./cache";
+import { pkgVersion as driverVersion } from "./packageVersion";
 import { ISnapshotTreeVersion } from "./definitions";
-import { IDocumentSession } from "./contracts";
+import { IDocumentSession, ISession } from "./contracts";
 
 const defaultRouterliciousDriverPolicies: IRouterliciousDriverPolicies = {
     enablePrefetch: true,
@@ -91,7 +92,7 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
             resolvedUrl.endpoints.ordererUrl,
         );
         // the backend responds with the actual document ID associated with the new container.
-        const documentSession: IDocumentSession = await ordererRestWrapper.post<IDocumentSession>(
+        const documentSession: IDocumentSession | string = await ordererRestWrapper.post<IDocumentSession | string>(
             `/documents/${tenantId}`,
             {
                 summary: convertSummaryToCreateNewSummary(appSummary),
@@ -99,9 +100,15 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
                 values: quorumValues,
             },
         );
-        const documentId = documentSession.documentId;
-        const session = documentSession.session;
-        replaceFluidUrl(resolvedUrl, session, parsedUrl);
+        let documentId;
+        let session: ISession;
+        if (typeof documentSession === "string") {
+            documentId = documentSession;
+        } else {
+            documentId = documentSession.documentId;
+            session = documentSession.session;
+            replaceWithDiscoveryUrl(resolvedUrl, session, parsedUrl);
+        }
 
         parsedUrl = parseFluidUrl(resolvedUrl.url);
         parsedUrl.set("pathname", replaceDocumentIdInPath(parsedUrl.pathname, documentId));
@@ -138,34 +145,35 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
     ): Promise<IDocumentService> {
         ensureFluidResolvedUrl(resolvedUrl);
 
-        let parsedUrl = parseFluidUrl(resolvedUrl.url);
-        if (!parsedUrl.pathname) {
-            throw new Error("Parsed url should contain tenant and doc Id!!");
+        const parsedUrl = parseFluidUrl(resolvedUrl.url);
+        const [, tenantId, documentId] = parsedUrl.pathname.split("/");
+        if (!documentId || !tenantId) {
+            throw new Error(
+                `Couldn't parse documentId and/or tenantId. [documentId:${documentId}][tenantId:${tenantId}]`);
         }
-        let [, tenantId] = parsedUrl.pathname.split("/");
-        const logger2 = ChildLogger.create(logger, "RouterliciousDriver");
-        let documentId = resolvedUrl.id;
-        let hasSessionLocationChanged: boolean = false;
-        let isSessionAlive: boolean = false;
+        const logger2 = ChildLogger.create(logger, "RouterliciousDriver", { all: { driverVersion }});
 
-        const rateLimiter = new RateLimiter(this.driverPolicies.maxConcurrentOrdererRequests);
-        const ordererRestWrapper = await RouterliciousOrdererRestWrapper.load(
-            tenantId,
-            documentId,
-            this.tokenProvider,
-            logger2,
-            rateLimiter,
-            this.driverPolicies.enableRestLess,
-            resolvedUrl.endpoints.ordererUrl,
-        );
-        // the backend responds with the actual document session associated with the container.
-        const documentSession: IDocumentSession = await ordererRestWrapper.get<IDocumentSession>(
-            `/documents/${tenantId}/session/${documentId}`,
-        );
-        const session = documentSession.session;
-        hasSessionLocationChanged = documentSession.hasSessionLocationChanged;
-        isSessionAlive = documentSession.session.isSessionAlive;
-        replaceFluidUrl(resolvedUrl, session, parsedUrl);
+        try {
+            const rateLimiter = new RateLimiter(this.driverPolicies.maxConcurrentOrdererRequests);
+            const ordererRestWrapper = await RouterliciousOrdererRestWrapper.load(
+                tenantId,
+                documentId,
+                this.tokenProvider,
+                logger2,
+                rateLimiter,
+                this.driverPolicies.enableRestLess,
+                resolvedUrl.endpoints.ordererUrl,
+            );
+
+            // the backend responds with the actual document session associated with the container.
+            const documentSession: IDocumentSession = await ordererRestWrapper.get<IDocumentSession>(
+                `/documents/${tenantId}/session/${documentId}`,
+            );
+            const session = documentSession.session;
+            replaceWithDiscoveryUrl(resolvedUrl, session, parsedUrl);
+        } catch (error) {
+            // Won't handle the error if there is no Api call
+        }
 
         const fluidResolvedUrl = resolvedUrl;
         const storageUrl = fluidResolvedUrl.endpoints.storageUrl;
@@ -174,13 +182,6 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
         if (!ordererUrl || !deltaStorageUrl) {
             throw new Error(
                 `All endpoints urls must be provided. [ordererUrl:${ordererUrl}][deltaStorageUrl:${deltaStorageUrl}]`);
-        }
-
-        parsedUrl = parseFluidUrl(fluidResolvedUrl.url);
-        [, tenantId, documentId] = parsedUrl.pathname.split("/");
-        if (!documentId || !tenantId) {
-            throw new Error(
-                `Couldn't parse documentId and/or tenantId. [documentId:${documentId}][tenantId:${tenantId}]`);
         }
 
         return new DocumentService(
@@ -194,8 +195,6 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
             documentId,
             this.driverPolicies,
             this.blobCache,
-            this.snapshotTreeCache,
-            hasSessionLocationChanged,
-            isSessionAlive);
+            this.snapshotTreeCache);
     }
 }
