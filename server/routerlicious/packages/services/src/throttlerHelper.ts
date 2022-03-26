@@ -4,11 +4,13 @@
  */
 
 import {
+    IUsageData,
     IThrottlerHelper,
     IThrottlerResponse,
     IThrottleStorageManager,
     IThrottlingMetrics,
 } from "@fluidframework/server-services-core";
+import { Lumberjack } from "@fluidframework/server-services-telemetry";
 
 /**
  * Implements the Token Bucket algorithm to calculate rate-limiting for throttling operations.
@@ -19,6 +21,7 @@ export class ThrottlerHelper implements IThrottlerHelper {
         private readonly rateInOperationsPerMs: number = 1000000,
         private readonly operationBurstLimit: number = 1000000,
         private readonly minCooldownIntervalInMs: number = 1000000,
+        private readonly enableStoreUsageData: boolean = false,
     ) {
     }
 
@@ -43,8 +46,14 @@ export class ThrottlerHelper implements IThrottlerHelper {
         const retryAfterInMs = this.getRetryAfterInMs(throttlingMetric, now);
         if (retryAfterInMs > 0) {
             throttlingMetric.retryAfterInMs = retryAfterInMs;
-            // update stored throttling metric with new retry duration
-            await this.throttleStorageManager.setThrottlingMetric(id, throttlingMetric);
+            if (this.enableStoreUsageData) {
+                const usageData: IUsageData = { value: count } as IUsageData;
+                Lumberjack.info(`Pushing usage data - id: ${id}, value: ${usageData.value}}`);
+                await this.throttleStorageManager.setThrottlingMetricAndUsageData(id, throttlingMetric, usageData);
+            } else {
+                // update stored throttling metric with new retry duration
+                await this.throttleStorageManager.setThrottlingMetric(id, throttlingMetric);
+            }
             return this.getThrottlerResponseFromThrottlingMetrics(throttlingMetric);
         }
 
@@ -71,8 +80,14 @@ export class ThrottlerHelper implements IThrottlerHelper {
             throttlingMetric.retryAfterInMs = 0;
         }
 
-        // update stored throttling metric
-        await this.throttleStorageManager.setThrottlingMetric(id, throttlingMetric);
+        if (this.enableStoreUsageData) {
+            const usageData: IUsageData = { value: count } as IUsageData;
+            Lumberjack.info(`Pushing usage data - id: ${id}, value: ${usageData.value}}`);
+            await this.throttleStorageManager.setThrottlingMetricAndUsageData(id, throttlingMetric, usageData);
+        } else {
+            // update stored throttling metric
+            await this.throttleStorageManager.setThrottlingMetric(id, throttlingMetric);
+        }
 
         return this.getThrottlerResponseFromThrottlingMetrics(throttlingMetric);
     }

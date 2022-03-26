@@ -54,7 +54,7 @@ export const executeRedisMultiWithHmsetLpushExpire = async (
     hKey: string,
     hData: { [key: string]: any },
     lKey: string,
-    lData: { [key: string]: any },
+    lData: string,
     expireAfterSeconds: number): Promise<void> => new Promise<void>((resolve, reject) => {
         client.multi()
         .hmset(hKey, hData)
@@ -107,7 +107,7 @@ export const executeRedisMultiWithHmsetLpushExpire = async (
 export const executeRedisMultiWithLpushExpire = async (
     client: Redis,
     lKey: string,
-    lData: { [key: string]: any },
+    lData: string,
     expireAfterSeconds: number): Promise<void> => new Promise<void>((resolve, reject) => {
         client.multi()
         .lpush(lKey, lData)

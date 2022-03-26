@@ -64,13 +64,14 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
     ): Promise<void> {
         const throttlingKey = this.getThrottlingKey(id);
         const usageKey = this.getUsageKey(id);
+        const usageDataString = JSON.stringify(usageData);
 
         return executeRedisMultiWithHmsetLpushExpire(
             this.client,
             throttlingKey,
             throttlingMetric as { [key: string]: any },
             usageKey,
-            usageData,
+            usageDataString,
             this.expireAfterSeconds);
     }
 
@@ -79,12 +80,20 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
         usageData: IUsageData,
     ): Promise<void> {
         const usageKey = this.getUsageKey(id);
+        const usageDataString = JSON.stringify(usageData);
 
         return executeRedisMultiWithLpushExpire(
             this.client,
             usageKey,
-            usageData,
+            usageDataString,
             this.expireAfterSeconds);
+    }
+
+    public async getUsageData(id: string): Promise<IUsageData> {
+        const usageKey = this.getUsageKey(id);
+        const usageDataString = await this.client.rpop(usageKey);
+        const usageData = JSON.parse(usageDataString);
+        return usageData;
     }
 
     public async getThrottlingMetric(id: string): Promise<IThrottlingMetrics | undefined> {

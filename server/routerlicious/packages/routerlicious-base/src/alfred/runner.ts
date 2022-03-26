@@ -39,6 +39,7 @@ export class AlfredRunner implements IRunner {
         private readonly restThrottler: IThrottler,
         private readonly socketConnectThrottler: IThrottler,
         private readonly socketSubmitOpThrottler: IThrottler,
+        private readonly socketSubmitSignalThrottler: IThrottler,
         private readonly singleUseTokenCache: ICache,
         private readonly storage: IDocumentStorage,
         private readonly clientManager: IClientManager,
@@ -47,7 +48,7 @@ export class AlfredRunner implements IRunner {
         private readonly producer: IProducer,
         private readonly metricClientConfig: any,
         private readonly globalDbMongoManager?: MongoManager,
-        private readonly throttleStorageManager: IThrottleStorageManager) {
+        private readonly throttleStorageManager?: IThrottleStorageManager) {
     }
 
     // eslint-disable-next-line @typescript-eslint/promise-function-async
@@ -88,7 +89,8 @@ export class AlfredRunner implements IRunner {
             isTokenExpiryEnabled,
             this.socketConnectThrottler,
             this.socketSubmitOpThrottler,
-            throttleStorageManager);
+            this.socketSubmitSignalThrottler,
+            this.throttleStorageManager);
 
         // Listen on provided port, on all network interfaces.
         httpServer.listen(this.port);

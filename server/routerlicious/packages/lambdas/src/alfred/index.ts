@@ -80,6 +80,8 @@ const getSubmitOpThrottleId = (clientId: string, tenantId: string) => `${clientI
 
 const getConnectivityMinutesUsageId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_ConnectivityMiniutes`;
 
+const getSubmitSignalThrottleId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_SubmitSignal`;
+
 // Sanitize the received op before sending.
 function sanitizeMessage(message: any): IDocumentMessage {
     // Trace sampling.
@@ -162,7 +164,8 @@ export function configureWebSocketServices(
     isTokenExpiryEnabled: boolean = false,
     connectThrottler?: core.IThrottler,
     submitOpThrottler?: core.IThrottler,
-    throttleStorageManager: core.IThrottleStorageManager) {
+    submitSignalThrottler?: core.IThrottler,
+    throttleStorageManager?: core.IThrottleStorageManager) {
     webSocketServer.on("connection", (socket: core.IWebSocket) => {
         // Map from client IDs on this connection to the object ID and user info.
         const connectionsMap = new Map<string, core.IOrdererConnection>();
@@ -505,6 +508,20 @@ export function configureWebSocketServices(
                     const nackMessage = createNackMessage(400, NackErrorType.BadRequestError, "Nonexistent client");
                     socket.emit("nack", "", [nackMessage]);
                 } else {
+                    const throttleError = checkThrottle(
+                        submitSignalThrottler,
+                        getSubmitSignalThrottleId(clientId, room.tenantId),
+                        room.tenantId,
+                        logger);
+                    if (throttleError) {
+                        const nackMessage = createNackMessage(
+                            throttleError.code,
+                            NackErrorType.ThrottlingError,
+                            throttleError.message,
+                            throttleError.retryAfter);
+                        socket.emit("nack", "", [nackMessage]);
+                        return;
+                    }
                     contentBatches.forEach((contentBatche) => {
                         const contents = Array.isArray(contentBatche) ? contentBatche : [contentBatche];
 
@@ -536,13 +553,12 @@ export function configureWebSocketServices(
                 const now = Date.now();
                 const connectionTimestamp = connectionTimeMap.get(clientId) ?? now;
                 const connectionTimeInMinutes = (now - connectionTimestamp)/60000;
+                const key = getConnectivityMinutesUsageId(clientId, connection.tenantId);
                 Lumberjack.info(
-                    `ClientConnectivityMinutes meter usage - value: ${connectionTimeInMinutes}, clientId: ${clientId}`,
+                    `Pushing usage data - id: ${key} value: ${connectionTimeInMinutes}, clientId: ${clientId}`,
                     getLumberBaseProperties(connection.documentId, connection.tenantId),
                 );
-
-                const key = getConnectivityMinutesUsageId(clientId, connection.tenantId);
-                throttleStorageManager.setUsageData(key, {
+                throttleStorageManager?.setUsageData(key, {
                     type: core.MeterType.ClientConnectivityMinutes,
                     value: connectionTimeInMinutes,
                     tenantId: connection.tenantId,

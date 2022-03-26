@@ -58,6 +58,11 @@ export interface IThrottleStorageManager {
     setUsageData(id: string, usageData: IUsageData): Promise<void>;
 
     /**
+     * Get usage data for the given id.
+     */
+    getUsageData(id: string): Promise<IUsageData>;
+
+    /**
      * Get throttling metrics for the given id.
      */
     getThrottlingMetric(id: string): Promise<IThrottlingMetrics>;
