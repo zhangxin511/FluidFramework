@@ -78,7 +78,7 @@ const getSocketConnectThrottleId = (tenantId: string) => `${tenantId}_OpenSocket
 
 const getSubmitOpThrottleId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_SubmitOp`;
 
-const getConnectivityMinutesUsageId = 
+const getConnectivityMinutesUsageId =
     (clientId: string, tenantId: string) => `${clientId}_${tenantId}_ConnectivityMiniutes`;
 
 const getSubmitSignalThrottleId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_SubmitSignal`;
