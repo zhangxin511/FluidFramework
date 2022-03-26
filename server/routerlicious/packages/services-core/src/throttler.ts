@@ -50,7 +50,10 @@ export interface IThrottleStorageManager {
     /**
      * Store throttling metrics and usage data for the given id.
      */
-    setThrottlingMetricAndUsageData(id: string, throttlingMetric: IThrottlingMetrics, usageData: IUsageData): Promise<void>;
+    setThrottlingMetricAndUsageData(
+        id: string,
+        throttlingMetric: IThrottlingMetrics,
+        usageData: IUsageData): Promise<void>;
 
     /**
      * Store usage data for the given id.

@@ -7,7 +7,7 @@
      OpsIn,
      OpsOut,
      ClientConnectivityMinutes,
-     StorageSpaceUsedInGB
+     StorageSpaceUsedInGB,
  }
 
  export interface IUsageData {
