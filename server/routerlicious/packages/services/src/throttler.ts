@@ -96,7 +96,7 @@ export class Throttler implements IThrottler {
         if (this.lastThrottleUpdateAtMap.get(id) === undefined) {
             this.lastThrottleUpdateAtMap.set(id, now);
         }
-        
+
         if (now - this.lastThrottleUpdateAtMap.get(id) > this.minThrottleIntervalInMs) {
             const countDelta = this.countDeltaMap.get(id);
             this.lastThrottleUpdateAtMap.set(id, now);

@@ -92,7 +92,7 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
     public async getUsageData(id: string): Promise<IUsageData> {
         const usageKey = this.getUsageKey(id);
         const usageDataString = await this.client.rpop(usageKey);
-        const usageData = JSON.parse(usageDataString);
+        const usageData = JSON.parse(usageDataString) as IUsageData;
         return usageData;
     }
 
@@ -110,7 +110,7 @@ export class RedisThrottleStorageManager implements IThrottleStorageManager {
             throttleReason: throttlingMetricRedis.throttleReason,
             retryAfterInMs: Number.parseInt(throttlingMetricRedis.retryAfterInMs, 10),
         };
-        
+
         return throttlingMetric;
     }
 
