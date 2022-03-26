@@ -78,7 +78,8 @@ const getSocketConnectThrottleId = (tenantId: string) => `${tenantId}_OpenSocket
 
 const getSubmitOpThrottleId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_SubmitOp`;
 
-const getConnectivityMinutesUsageId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_ConnectivityMiniutes`;
+const getConnectivityMinutesUsageId = 
+    (clientId: string, tenantId: string) => `${clientId}_${tenantId}_ConnectivityMiniutes`;
 
 const getSubmitSignalThrottleId = (clientId: string, tenantId: string) => `${clientId}_${tenantId}_SubmitSignal`;
 
@@ -552,13 +553,13 @@ export function configureWebSocketServices(
                 connection.disconnect();
                 const now = Date.now();
                 const connectionTimestamp = connectionTimeMap.get(clientId) ?? now;
-                const connectionTimeInMinutes = (now - connectionTimestamp)/60000;
+                const connectionTimeInMinutes = (now - connectionTimestamp) / 60000;
                 const key = getConnectivityMinutesUsageId(clientId, connection.tenantId);
                 Lumberjack.info(
                     `Pushing usage data - id: ${key} value: ${connectionTimeInMinutes}, clientId: ${clientId}`,
                     getLumberBaseProperties(connection.documentId, connection.tenantId),
                 );
-                throttleStorageManager?.setUsageData(key, {
+                await throttleStorageManager?.setUsageData(key, {
                     type: core.MeterType.ClientConnectivityMinutes,
                     value: connectionTimeInMinutes,
                     tenantId: connection.tenantId,
