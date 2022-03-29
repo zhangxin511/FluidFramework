@@ -34,6 +34,7 @@ const defaultRouterliciousDriverPolicies: IRouterliciousDriverPolicies = {
     maxConcurrentStorageRequests: 100,
     maxConcurrentOrdererRequests: 100,
     aggregateBlobsSmallerThanBytes: undefined,
+    enableDiscovery: false,
     enableWholeSummaryUpload: false,
     enableRestLess: true,
 };
@@ -98,6 +99,7 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
                 summary: convertSummaryToCreateNewSummary(appSummary),
                 sequenceNumber: documentAttributes.sequenceNumber,
                 values: quorumValues,
+                enableDiscovery: this.driverPolicies.enableDiscovery,
             },
         );
         let documentId;

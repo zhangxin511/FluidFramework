@@ -114,7 +114,13 @@ export function create(
                 historianUrl,
                 values);
 
-            handleResponse(createP.then(() => documentSession), response, undefined, 201);
+            // Enable Discovery
+            const enableDiscovery = !request.body.enableDiscovery ? false : request.body.enableDiscover as boolean;
+            if (enableDiscovery) {
+                handleResponse(createP.then(() => documentSession), response, undefined, 201);
+            } else {
+                handleResponse(createP.then(() => id), response, undefined, 201);
+            }
         });
 
     /**
