@@ -430,6 +430,17 @@ export class RestGitService {
         }
     }
 
+     /**
+     * Caches by the given key.
+     */
+    private async setSummaryCache<T>(key: string, fetch: () => Promise<T>): Promise<T> {
+        winston.info(`Fetching ${key}`);
+        Lumberjack.info(`Fetching ${key}`, this.lumberProperties);
+        const value = await fetch();
+        this.setCache(key, value);
+        return value;
+    }
+
     /**
      * Deletes the given key from the cache. Will log any errors with the cache.
      */
@@ -459,12 +470,7 @@ export class RestGitService {
             }
 
             // Value is not cached - fetch it with the provided function and then cache the value
-            winston.info(`Fetching ${key}`);
-            Lumberjack.info(`Fetching ${key}`, this.lumberProperties);
-            const value = await fetch();
-            this.setCache(key, value);
-
-            return value;
+            return this.setSummaryCache(key, fetch);
         } else {
             return fetch();
         }
@@ -485,16 +491,13 @@ export class RestGitService {
                 return cachedValue;
             }
         }
+
         /**
          * We need to cache the latest summary regardless of the useCache flag. When we fetch the summary at the first time,
          * we need to update the cache. If not, the following calls with useCache enabled might read the outdated summary from cache in case of
          * the historian service change.
          */
-        winston.info(`Fetching ${key}`);
-        Lumberjack.info(`Fetching ${key}`, this.lumberProperties);
-        const value = await fetch();
-        this.setCache(key, value);
-        return value;
+        return this.setSummaryCache(key, fetch);
     }
 
     private getSummaryCacheKey(type: IWholeSummaryPayloadType): string {

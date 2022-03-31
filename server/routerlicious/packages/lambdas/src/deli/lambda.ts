@@ -23,10 +23,8 @@ import {
     IClientSequenceNumber,
     IContext,
     IControlMessage,
-    ICollection,
     IDeliState,
     IDisableNackMessagesControlMessageContents,
-    IDocument,
     IMessage,
     INackMessage,
     IPartitionLambda,
@@ -199,7 +197,6 @@ export class DeliLambda extends TypedEventEmitter<IDeliLambdaEvents> implements 
         private readonly forwardProducer: IProducer,
         private readonly reverseProducer: IProducer,
         private readonly serviceConfiguration: IServiceConfiguration,
-        private readonly documentCollection: ICollection<IDocument>,
         private sessionMetric: Lumber<LumberEventName.SessionResult> | undefined,
         private sessionStartMetric: Lumber<LumberEventName.StartSessionResult> | undefined) {
         super();
@@ -434,7 +431,7 @@ export class DeliLambda extends TypedEventEmitter<IDeliLambdaEvents> implements 
     public close(closeType: LambdaCloseType) {
         this.checkpointContext.close();
 
-        void this.markSessionAsNotAlive(closeType);
+        // await this.markSessionAsNotAlive(closeType);
         this.clearActivityIdleTimer();
         this.clearNoopConsolidationTimer();
         this.clearCheckpointIdleTimer();
@@ -448,28 +445,28 @@ export class DeliLambda extends TypedEventEmitter<IDeliLambdaEvents> implements 
         }
     }
 
-    private async markSessionAsNotAlive(closeType: LambdaCloseType) {
-        if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)) {
-            const documentIdP = this.documentId;
-            const result = await this.documentCollection.findOne({ documentIdP });
-            const sessionP = result?.session;
-            if (sessionP !== undefined) {
-                sessionP.isSessionAlive = false;
-                await this.documentCollection.update(
-                    {
-                        documentIdP,
-                    },
-                    {
-                        session: sessionP,
-                    },
-                    {});
-                this.sessionMetric?.success("Update isSessionAlive as false in the document session");
-                const msg = "Update isSessionAlive as false in the document session";
-                this.context.log?.info(msg);
-                Lumberjack.info(msg, getLumberBaseProperties(this.documentId, this.tenantId));
-            }
-        }
-    }
+    // private async markSessionAsNotAlive(closeType: LambdaCloseType) {
+    //     if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)) {
+    //         const documentIdP = this.documentId;
+    //         const result = await this.documentCollection.findOne({ documentIdP });
+    //         const sessionP = result?.session;
+    //         if (sessionP !== undefined) {
+    //             sessionP.isSessionAlive = false;
+    //             await this.documentCollection.update(
+    //                 {
+    //                     documentIdP,
+    //                 },
+    //                 {
+    //                     session: sessionP,
+    //                 },
+    //                 {});
+    //             this.sessionMetric?.success("Update isSessionAlive as false in the document session");
+    //             const msg = "Update isSessionAlive as false in the document session";
+    //             this.context.log?.info(msg);
+    //             Lumberjack.info(msg, getLumberBaseProperties(this.documentId, this.tenantId));
+    //         }
+    //     }
+    // }
 
     private logSessionStartMetrics(failMetric: boolean = false) {
         if (this.sessionStartMetric?.isCompleted()) {
