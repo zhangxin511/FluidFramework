@@ -93,7 +93,7 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
             resolvedUrl.endpoints.ordererUrl,
         );
         // the backend responds with the actual document ID associated with the new container.
-        const documentSession: IDocumentSession | string = await ordererRestWrapper.post<IDocumentSession | string>(
+        const result: IDocumentSession | string = await ordererRestWrapper.post<IDocumentSession | string>(
             `/documents/${tenantId}`,
             {
                 summary: convertSummaryToCreateNewSummary(appSummary),
@@ -104,11 +104,11 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
         );
         let documentId;
         let session: ISession;
-        if (typeof documentSession === "string") {
-            documentId = documentSession;
+        if (typeof result === "string") {
+            documentId = result;
         } else {
-            documentId = documentSession.documentId;
-            session = documentSession.session;
+            documentId = result.documentId;
+            session = result.session;
             replaceWithDiscoveryUrl(resolvedUrl, session, parsedUrl);
         }
 
@@ -155,7 +155,7 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
         }
         const logger2 = ChildLogger.create(logger, "RouterliciousDriver", { all: { driverVersion }});
 
-        try {
+        if (this.driverPolicies.enableDiscovery) {
             const rateLimiter = new RateLimiter(this.driverPolicies.maxConcurrentOrdererRequests);
             const ordererRestWrapper = await RouterliciousOrdererRestWrapper.load(
                 tenantId,
@@ -173,8 +173,6 @@ export class RouterliciousDocumentServiceFactory implements IDocumentServiceFact
             );
             const session = documentSession.session;
             replaceWithDiscoveryUrl(resolvedUrl, session, parsedUrl);
-        } catch (error) {
-            // Won't handle the error if there is no Api call
         }
 
         const fluidResolvedUrl = resolvedUrl;

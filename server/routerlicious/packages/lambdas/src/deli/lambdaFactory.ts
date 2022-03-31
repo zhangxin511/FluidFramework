@@ -19,7 +19,6 @@ import {
     IProducer,
     IServiceConfiguration,
     ITenantManager,
-    LambdaCloseType,
     MongoManager,
 } from "@fluidframework/server-services-core";
 import { generateServiceProtocolEntries } from "@fluidframework/protocol-base";
@@ -152,7 +151,7 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
         const checkpointManager = createDeliCheckpointManagerFromCollection(tenantId, documentId, this.collection);
 
         // Should the lambda reaize that term has flipped to send a no-op message at the beginning?
-        const deliLambda = new DeliLambda(
+        return new DeliLambda(
             context,
             tenantId,
             documentId,
@@ -162,31 +161,9 @@ export class DeliLambdaFactory extends EventEmitter implements IPartitionLambdaF
             this.forwardProducer,
             this.reverseProducer,
             this.serviceConfiguration,
+            this.collection,
             sessionMetric,
             sessionStartMetric);
-
-        deliLambda.on("close", (closeType) => {
-            const handler = async () => {
-                if ((closeType === LambdaCloseType.ActivityTimeout || closeType === LambdaCloseType.Error)) {
-                    const result = await this.collection.findOne({ documentId });
-                    const sessionP = result?.session;
-                    if (sessionP !== undefined) {
-                        sessionP.isSessionAlive = false;
-                        await this.collection.update(
-                            {
-                                documentId,
-                            },
-                            {
-                                session: sessionP,
-                            },
-                            {});
-                    }
-                }
-            };
-            void handler();
-        });
-
-        return deliLambda;
     }
 
     private logSessionFailureMetrics(

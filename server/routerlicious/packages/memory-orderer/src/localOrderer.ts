@@ -289,6 +289,7 @@ export class LocalOrderer implements IOrderer {
                     this.deltasKafka,
                     this.rawDeltasKafka,
                     this.serviceConfiguration,
+                    documentCollection,
                     undefined,
                     undefined);
             });
