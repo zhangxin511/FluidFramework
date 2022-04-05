@@ -50,7 +50,6 @@ export interface IFileSystemPromises {
     readlink: typeof fsPromises.readlink;
     symlink: typeof fsPromises.symlink;
     chmod: typeof fsPromises.chmod;
-    rm: typeof fsPromises.rm;
 }
 
 /**
