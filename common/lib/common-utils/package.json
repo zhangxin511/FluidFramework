@@ -43,6 +43,7 @@
     "eslint:fix": "eslint --format stylish src --fix --fix-type problem,suggestion,layout",
     "lint": "npm run eslint",
     "lint:fix": "npm run eslint:fix",
+    "prepack": "exit 1",
     "test": "npm run test:mocha && npm run test:jest",
     "test:coverage": "npm run test:report",
     "test:jest": "jest",
