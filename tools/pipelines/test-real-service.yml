@@ -17,6 +17,7 @@ resources:
       - release/*
       - main
       - next
+      - test/tianzhu8
 
 variables:
 - group: prague-key-vault
