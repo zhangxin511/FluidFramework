@@ -11,20 +11,20 @@
   "license": "MIT",
   "author": "Microsoft and contributors",
   "scripts": {
-    "build": "concurrently yarn:build:compile yarn:lint",
+    "build": "concurrently pnpm:build:compile pnpm:lint",
     "build:compile": "tsc",
-    "build:full": "yarn run build",
-    "build:full:compile": "yarn run build:compile",
+    "build:full": "pnpm run build",
+    "build:full:compile": "pnpm run build:compile",
     "clean": "rimraf dist lib *.tsbuildinfo *.build.log",
     "eslint": "eslint --format stylish src",
     "eslint:fix": "eslint --format stylish src --fix --fix-type problem,suggestion,layout",
-    "lint": "yarn run eslint",
-    "lint:fix": "yarn run eslint:fix",
-    "prepack": "yarn run webpack",
+    "lint": "pnpm run eslint",
+    "lint:fix": "pnpm run eslint:fix",
+    "prepack": "pnpm run webpack",
     "tsfmt": "tsfmt --verify",
     "tsfmt:fix": "tsfmt --replace",
     "webpack": "webpack",
-    "webpack:profile": "yarn run webpack"
+    "webpack:profile": "pnpm run webpack"
   },
   "dependencies": {
     "@fluidframework/aqueduct": "^0.59.2000",

@@ -12,14 +12,14 @@
   "author": "Microsoft and contributors",
   "main": "dist/www.js",
   "scripts": {
-    "build": "yarn run build:genver && concurrently yarn:build:compile yarn:lint",
-    "build:compile": "yarn run tsc",
+    "build": "pnpm run build:genver && concurrently pnpm:build:compile pnpm:lint",
+    "build:compile": "pnpm run tsc",
     "build:genver": "gen-version",
     "clean": "rimraf dist *.tsbuildinfo *.build.log",
     "eslint": "eslint --format stylish src",
     "eslint:fix": "eslint --format stylish src --fix --fix-type problem,suggestion,layout",
-    "lint": "yarn run eslint",
-    "lint:fix": "yarn run eslint:fix",
+    "lint": "pnpm run eslint",
+    "lint:fix": "pnpm run eslint:fix",
     "start": "node dist/www.js",
     "tsc": "tsc"
   },
