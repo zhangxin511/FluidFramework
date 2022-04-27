@@ -15,6 +15,8 @@
       "packages/*/*",
       "examples/**",
       "experimental/*/*",
+      "server/routerlicious/packages/gitresources",
+      "server/routerlicious/packages/protocol-base",
       "server/tinylicious",
       "server/azure-local-service",
       "common/**",
@@ -145,6 +147,7 @@
     "nx": "~13.8.0",
     "rimraf": "^2.6.2",
     "run-script-os": "^1.1.6",
+    "turbo": "^1.2.4",
     "typescript": "~4.1.3",
     "yarn-deduplicate": "^4.0.0"
   },
