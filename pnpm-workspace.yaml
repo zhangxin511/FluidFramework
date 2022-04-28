@@ -3,6 +3,7 @@
         "common/**",
         "examples/**",
         "experimental/*/*",
+        "experimental/PropertyDDS/packages/*",
         "packages/*/*",
         "server/azure-local-service",
         # "server/routerlicious/packages/*",
