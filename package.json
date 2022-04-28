@@ -53,6 +53,7 @@
     "dedup": "yarn-deduplicate",
     "install-strict": "npx midgard-yarn install",
     "layer-check": "fluid-layer-check --info tools/build-tools/data/layerInfo.json",
+    "lerna": "lerna",
     "lint": "pnpm -r lint --no-sort --workspace-concurrency 8 -- -- -- --color",
     "lint:fix": "pnpm -r lint:fix --no-sort --workspace-concurrency 8 -- -- -- --color",
     "policy-check": "fluid-repo-policy-check",
