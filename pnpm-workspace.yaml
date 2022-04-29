@@ -12,6 +12,7 @@
         # "server/routerlicious/packages/gitresources",
         "server/tinylicious",
         "tools/**",
+        "scripts"
     ]
 
 link-workspace-packages: deep
