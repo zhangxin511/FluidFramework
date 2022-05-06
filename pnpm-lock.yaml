@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/test-tools': ^0.2.3074
       '@microsoft/api-documenter': ^7.17.9
       '@microsoft/api-extractor': ^7.22.2
@@ -25,7 +25,7 @@ importers:
       typescript: ~4.5.5
       yarn-deduplicate: ^4.0.0
     devDependencies:
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/test-tools': 0.2.3074
       '@microsoft/api-documenter': 7.17.9
       '@microsoft/api-extractor': 7.22.2
@@ -91,7 +91,7 @@ importers:
   common/lib/common-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions-previous': npm:@fluidframework/common-definitions@^0.20.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@microsoft/api-extractor': ^7.22.2
@@ -115,7 +115,7 @@ importers:
       typescript-formatter: 7.1.0
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/common-definitions-previous': /@fluidframework/common-definitions/0.20.1
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -141,7 +141,7 @@ importers:
   common/lib/common-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils-previous': npm:@fluidframework/common-utils@^0.32.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -196,7 +196,7 @@ importers:
       sha.js: 2.4.11
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/common-utils-previous': /@fluidframework/common-utils/0.32.1
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -240,7 +240,7 @@ importers:
   common/lib/container-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/container-definitions-previous': npm:@fluidframework/container-definitions@0.48.1000
       '@fluidframework/core-interfaces': ^0.43.1000
@@ -275,7 +275,7 @@ importers:
       '@fluidframework/protocol-definitions': link:../protocol-definitions
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/container-definitions-previous': /@fluidframework/container-definitions/0.48.1000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -303,7 +303,7 @@ importers:
   common/lib/core-interfaces:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/core-interfaces-previous': npm:@fluidframework/core-interfaces@0.43.1000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@microsoft/api-extractor': ^7.22.2
@@ -328,7 +328,7 @@ importers:
       typescript-formatter: 7.1.0
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/core-interfaces-previous': /@fluidframework/core-interfaces/0.43.1000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -355,7 +355,7 @@ importers:
   common/lib/driver-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions-previous': npm:@fluidframework/driver-definitions@0.46.1000
@@ -386,7 +386,7 @@ importers:
       '@fluidframework/protocol-definitions': link:../protocol-definitions
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/driver-definitions-previous': /@fluidframework/driver-definitions/0.46.1000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -412,7 +412,7 @@ importers:
   common/lib/protocol-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions-previous': npm:@fluidframework/protocol-definitions@0.1028.1000
@@ -439,7 +439,7 @@ importers:
       '@fluidframework/common-definitions': 0.20.1
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/protocol-definitions-previous': /@fluidframework/protocol-definitions/0.1028.1000
       '@microsoft/api-extractor': 7.22.2
@@ -509,7 +509,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -563,7 +563,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -614,7 +614,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -666,7 +666,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -718,7 +718,7 @@ importers:
       eslint-plugin-react: ~7.28.0
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
-      html-loader: ^0.5.5
+      html-loader: ^3.1.0
       html-webpack-plugin: ^4.5.2
       jest: ^26.6.3
       jest-junit: ^10.0.0
@@ -732,9 +732,9 @@ importers:
       react-grid-layout: ^0.18.3
       rimraf: ^2.6.2
       sass-loader: ^7.1.0
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -794,7 +794,7 @@ importers:
       eslint-plugin-react: 7.28.0_eslint@8.6.0
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
-      html-loader: 0.5.5
+      html-loader: 3.1.0_webpack@4.46.0
       html-webpack-plugin: 4.5.2_webpack@4.46.0
       jest: 26.6.3
       jest-junit: 10.0.0
@@ -802,9 +802,9 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       sass-loader: 7.3.1_webpack@4.46.0
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       url-loader: 2.3.0_webpack@4.46.0
@@ -853,7 +853,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       vue: ^2.6.12
@@ -902,7 +902,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -952,7 +952,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -1002,7 +1002,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       url-loader: 2.3.0_webpack@4.46.0
@@ -1053,7 +1053,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1102,7 +1102,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1151,7 +1151,7 @@ importers:
       eslint-plugin-unicorn: ~40.0.0
       rimraf: ^2.6.2
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1199,7 +1199,7 @@ importers:
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1246,7 +1246,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1292,7 +1292,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1337,7 +1337,7 @@ importers:
       puppeteer: ^1.20.0
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1381,95 +1381,12 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
       webpack-cli: 4.9.2_d088bc41da10a1b38c84f1ee2667d6c3
       webpack-dev-server: 4.0.0_webpack-cli@4.9.2+webpack@4.46.0
-      webpack-merge: 5.8.0
-
-  examples/data-objects/key-value-cache:
-    specifiers:
-      '@fluid-tools/webpack-fluid-loader': ^0.59.3000
-      '@fluidframework/aqueduct': ^0.59.3000
-      '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/common-utils': ^0.32.1
-      '@fluidframework/container-definitions': ^0.48.1000
-      '@fluidframework/container-runtime': ^0.59.3000
-      '@fluidframework/core-interfaces': ^0.43.1000
-      '@fluidframework/datastore': ^0.59.3000
-      '@fluidframework/datastore-definitions': ^0.59.3000
-      '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/map': ^0.59.3000
-      '@fluidframework/request-handler': ^0.59.3000
-      '@fluidframework/runtime-definitions': ^0.59.3000
-      '@fluidframework/runtime-utils': ^0.59.3000
-      '@rushstack/eslint-config': ^2.5.1
-      '@types/node': ^14.18.0
-      '@typescript-eslint/eslint-plugin': ~5.9.0
-      '@typescript-eslint/parser': ~5.9.0
-      concurrently: ^6.2.0
-      debug: ^4.1.1
-      eslint: ~8.6.0
-      eslint-plugin-editorconfig: ~3.2.0
-      eslint-plugin-eslint-comments: ~3.2.0
-      eslint-plugin-import: ~2.25.4
-      eslint-plugin-jest: ~26.1.3
-      eslint-plugin-mocha: ~10.0.3
-      eslint-plugin-promise: ~6.0.0
-      eslint-plugin-react: ~7.28.0
-      eslint-plugin-tsdoc: ~0.2.14
-      eslint-plugin-unicorn: ~40.0.0
-      rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
-      typescript: ~4.5.5
-      typescript-formatter: 7.1.0
-      webpack: ^4.46.0
-      webpack-cli: ^4.9.2
-      webpack-dev-server: 4.0.0
-      webpack-merge: ^5.8.0
-    dependencies:
-      '@fluidframework/aqueduct': link:../../../packages/framework/aqueduct
-      '@fluidframework/common-utils': 0.32.1
-      '@fluidframework/container-definitions': link:../../../common/lib/container-definitions
-      '@fluidframework/container-runtime': link:../../../packages/runtime/container-runtime
-      '@fluidframework/core-interfaces': link:../../../common/lib/core-interfaces
-      '@fluidframework/datastore': link:../../../packages/runtime/datastore
-      '@fluidframework/datastore-definitions': link:../../../packages/runtime/datastore-definitions
-      '@fluidframework/map': link:../../../packages/dds/map
-      '@fluidframework/request-handler': link:../../../packages/framework/request-handler
-      '@fluidframework/runtime-definitions': link:../../../packages/runtime/runtime-definitions
-      '@fluidframework/runtime-utils': link:../../../packages/runtime/runtime-utils
-      debug: 4.3.4
-    devDependencies:
-      '@fluid-tools/webpack-fluid-loader': link:../../../packages/tools/webpack-fluid-loader
-      '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
-      '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
-      '@types/node': 14.18.13
-      '@typescript-eslint/eslint-plugin': 5.9.1_46ff1e3eeda39b5395c18b563a83af7a
-      '@typescript-eslint/parser': 5.9.1_eslint@8.6.0+typescript@4.5.5
-      concurrently: 6.5.1
-      eslint: 8.6.0
-      eslint-plugin-editorconfig: 3.2.0_e5f75ba3e61c3bbc57c37e610846ef7c
-      eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
-      eslint-plugin-import: 2.25.4_eslint@8.6.0
-      eslint-plugin-jest: 26.1.4_c64849377e9f83cba16eb6e13b8a0018
-      eslint-plugin-mocha: 10.0.4_eslint@8.6.0
-      eslint-plugin-promise: 6.0.0_eslint@8.6.0
-      eslint-plugin-react: 7.28.0_eslint@8.6.0
-      eslint-plugin-tsdoc: 0.2.16
-      eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
-      rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
-      typescript: 4.5.5
-      typescript-formatter: 7.1.0_typescript@4.5.5
-      webpack: 4.46.0_webpack-cli@4.9.2
-      webpack-cli: 4.9.2_d088bc41da10a1b38c84f1ee2667d6c3
-      webpack-dev-server: 4.0.0_dfd3cf57148efba22f472bb1b83bc304
       webpack-merge: 5.8.0
 
   examples/data-objects/monaco:
@@ -1501,17 +1418,17 @@ importers:
       eslint-plugin-react: ~7.28.0
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
-      html-loader: ^0.5.5
+      html-loader: ^3.1.0
       loader-utils: ^1.1.0
-      monaco-editor: ^0.15.6
-      monaco-editor-webpack-plugin: ~1.7.0
+      monaco-editor: ^0.30.0
+      monaco-editor-webpack-plugin: ^6.0.0
       react: ^16.10.2
       rimraf: ^2.6.2
       sass: ^1.42.1
       sass-loader: ^7.1.0
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -1528,7 +1445,7 @@ importers:
       '@fluidframework/runtime-definitions': link:../../../packages/runtime/runtime-definitions
       '@fluidframework/sequence': link:../../../packages/dds/sequence
       '@types/node': 14.18.13
-      monaco-editor: 0.15.6
+      monaco-editor: 0.30.1
       react: 16.14.0
     devDependencies:
       '@fluid-tools/webpack-fluid-loader': link:../../../packages/tools/webpack-fluid-loader
@@ -1550,15 +1467,15 @@ importers:
       eslint-plugin-react: 7.28.0_eslint@8.6.0
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
-      html-loader: 0.5.5
+      html-loader: 3.1.0_webpack@4.46.0
       loader-utils: 1.4.0
-      monaco-editor-webpack-plugin: 1.7.0_afb2ec2a36717f57f4cf2a90af1076bd
+      monaco-editor-webpack-plugin: 6.0.0_e4146de625aad8e6c67af0b29262186e
       rimraf: 2.7.1
       sass: 1.50.1
       sass-loader: 7.3.1_webpack@4.46.0
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       url-loader: 2.3.0_webpack@4.46.0
@@ -1605,7 +1522,7 @@ importers:
       puppeteer: ^1.20.0
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1650,7 +1567,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1698,7 +1615,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1745,7 +1662,7 @@ importers:
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1804,7 +1721,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1862,7 +1779,7 @@ importers:
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1906,7 +1823,7 @@ importers:
       puppeteer: ^1.20.0
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -1949,7 +1866,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -1982,7 +1899,7 @@ importers:
       eslint-plugin-unicorn: ~40.0.0
       puppeteer: ^1.20.0
       rimraf: ^2.6.2
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2013,7 +1930,7 @@ importers:
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       puppeteer: 1.20.0
       rimraf: 2.7.1
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2060,7 +1977,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2106,7 +2023,7 @@ importers:
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2153,7 +2070,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2199,7 +2116,7 @@ importers:
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2246,7 +2163,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2292,7 +2209,7 @@ importers:
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2355,7 +2272,7 @@ importers:
       prosemirror-view: ^1.10.3
       rimraf: ^2.6.2
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2417,7 +2334,7 @@ importers:
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2482,8 +2399,8 @@ importers:
       react: ^16.10.2
       react-dom: ^16.10.2
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -2548,8 +2465,8 @@ importers:
       jsdom: 16.7.0
       puppeteer: 1.20.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
+      source-map-loader: 1.1.3_webpack@4.46.0
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       url-loader: 2.3.0_webpack@4.46.0
@@ -2599,7 +2516,7 @@ importers:
       rimraf: ^2.6.2
       simplemde: ^1.11.2
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2647,7 +2564,7 @@ importers:
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2774,7 +2691,7 @@ importers:
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -2793,7 +2710,7 @@ importers:
       '@fluidframework/sequence': link:../../../packages/dds/sequence
       '@fluidframework/view-interfaces': link:../../../packages/framework/view-interfaces
       '@tiny-calc/micro': 0.0.0-alpha.5
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       url-loader: 2.3.0_webpack@4.46.0
     devDependencies:
       '@fluid-tools/webpack-fluid-loader': link:../../../packages/tools/webpack-fluid-loader
@@ -2868,7 +2785,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -2920,7 +2837,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -2975,8 +2892,8 @@ importers:
       react: ^16.10.2
       react-dom: ^16.10.2
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -3032,8 +2949,8 @@ importers:
       jest-puppeteer: 4.4.0_puppeteer@1.20.0
       puppeteer: 1.20.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
+      source-map-loader: 1.1.3_webpack@4.46.0
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3084,7 +3001,7 @@ importers:
       eslint-plugin-react: ~7.28.0
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
-      html-loader: ^0.5.5
+      html-loader: ^3.1.0
       jest: ^26.6.3
       jest-junit: ^10.0.0
       jest-puppeteer: ^4.3.0
@@ -3095,9 +3012,9 @@ importers:
       react-tabs: ^3.1.0
       rimraf: ^2.6.2
       sass-loader: ^7.1.0
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       url-loader: ^2.1.0
@@ -3154,16 +3071,16 @@ importers:
       eslint-plugin-react: 7.28.0_eslint@8.6.0
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
-      html-loader: 0.5.5
+      html-loader: 3.1.0_webpack@4.46.0
       jest: 26.6.3
       jest-junit: 10.0.0
       jest-puppeteer: 4.4.0_puppeteer@1.20.0
       puppeteer: 1.20.0
       rimraf: 2.7.1
       sass-loader: 7.3.1_webpack@4.46.0
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       url-loader: 2.3.0_webpack@4.46.0
@@ -3214,17 +3131,17 @@ importers:
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
       file-loader: ^3.0.1
-      html-loader: ^0.5.5
+      html-loader: ^3.1.0
       ignore-styles: ^5.0.1
       jsdom: ^16.7.0
       jsdom-global: ^3.0.2
       mocha: ^8.4.0
       nyc: ^15.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       source-map-support: ^0.5.16
       style-loader: ^1.0.0
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       ts-node: ^7.0.1
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
@@ -3276,17 +3193,17 @@ importers:
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       file-loader: 3.0.1_webpack@4.46.0
-      html-loader: 0.5.5
+      html-loader: 3.1.0_webpack@4.46.0
       ignore-styles: 5.0.1
       jsdom: 16.7.0
       jsdom-global: 3.0.2_jsdom@16.7.0
       mocha: 8.4.0
       nyc: 15.1.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       source-map-support: 0.5.21
       style-loader: 1.3.0_webpack@4.46.0
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       ts-node: 7.0.1
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
@@ -3345,7 +3262,7 @@ importers:
       react-dom: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -3400,7 +3317,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3449,7 +3366,7 @@ importers:
       puppeteer: ^1.20.0
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -3497,7 +3414,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3543,7 +3460,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -3588,7 +3505,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3651,7 +3568,7 @@ importers:
       rimraf: ^2.6.2
       style-loader: ^1.0.0
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -3715,7 +3632,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3757,8 +3674,8 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       semver: ^7.3.4
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -3798,8 +3715,8 @@ importers:
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
+      source-map-loader: 1.1.3_webpack@4.46.0
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -3845,8 +3762,8 @@ importers:
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -3890,79 +3807,12 @@ importers:
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
+      source-map-loader: 1.1.3_webpack@4.46.0
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0
       webpack-dev-server: 4.0.0_webpack@4.46.0
-
-  examples/hosts/node-host:
-    specifiers:
-      '@fluid-example/key-value-cache': ^0.59.3000
-      '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/container-definitions': ^0.48.1000
-      '@fluidframework/container-loader': ^0.59.3000
-      '@fluidframework/core-interfaces': ^0.43.1000
-      '@fluidframework/driver-definitions': ^0.46.1000
-      '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/routerlicious-driver': ^0.59.3000
-      '@fluidframework/routerlicious-host': ^0.59.3000
-      '@fluidframework/test-runtime-utils': ^0.59.3000
-      '@rushstack/eslint-config': ^2.5.1
-      '@typescript-eslint/eslint-plugin': ~5.9.0
-      '@typescript-eslint/parser': ~5.9.0
-      concurrently: ^6.2.0
-      eslint: ~8.6.0
-      eslint-plugin-editorconfig: ~3.2.0
-      eslint-plugin-eslint-comments: ~3.2.0
-      eslint-plugin-import: ~2.25.4
-      eslint-plugin-jest: ~26.1.3
-      eslint-plugin-mocha: ~10.0.3
-      eslint-plugin-promise: ~6.0.0
-      eslint-plugin-react: ~7.28.0
-      eslint-plugin-tsdoc: ~0.2.14
-      eslint-plugin-unicorn: ~40.0.0
-      jsonwebtoken: ^8.4.0
-      rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
-      typescript: ~4.5.5
-      uuid: ^8.3.1
-    dependencies:
-      '@fluid-example/key-value-cache': link:../../data-objects/key-value-cache
-      '@fluidframework/container-definitions': link:../../../common/lib/container-definitions
-      '@fluidframework/container-loader': link:../../../packages/loader/container-loader
-      '@fluidframework/core-interfaces': link:../../../common/lib/core-interfaces
-      '@fluidframework/driver-definitions': link:../../../common/lib/driver-definitions
-      '@fluidframework/protocol-definitions': link:../../../common/lib/protocol-definitions
-      '@fluidframework/routerlicious-driver': link:../../../packages/drivers/routerlicious-driver
-      '@fluidframework/routerlicious-host': link:../../../packages/drivers/routerlicious-host
-      '@fluidframework/test-runtime-utils': link:../../../packages/runtime/test-runtime-utils
-      jsonwebtoken: 8.5.1
-      uuid: 8.3.2
-    devDependencies:
-      '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
-      '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
-      '@typescript-eslint/eslint-plugin': 5.9.1_46ff1e3eeda39b5395c18b563a83af7a
-      '@typescript-eslint/parser': 5.9.1_eslint@8.6.0+typescript@4.5.5
-      concurrently: 6.5.1
-      eslint: 8.6.0
-      eslint-plugin-editorconfig: 3.2.0_e5f75ba3e61c3bbc57c37e610846ef7c
-      eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
-      eslint-plugin-import: 2.25.4_eslint@8.6.0
-      eslint-plugin-jest: 26.1.4_c64849377e9f83cba16eb6e13b8a0018
-      eslint-plugin-mocha: 10.0.4_eslint@8.6.0
-      eslint-plugin-promise: 6.0.0_eslint@8.6.0
-      eslint-plugin-react: 7.28.0_eslint@8.6.0
-      eslint-plugin-tsdoc: 0.2.16
-      eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
-      rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
-      typescript: 4.5.5
 
   examples/utils/bundle-size-tests:
     specifiers:
@@ -3996,8 +3846,8 @@ importers:
       eslint-plugin-tsdoc: ~0.2.14
       eslint-plugin-unicorn: ~40.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -4011,7 +3861,7 @@ importers:
       '@fluidframework/matrix': link:../../../packages/dds/matrix
       '@fluidframework/odsp-driver': link:../../../packages/drivers/odsp-driver
       '@fluidframework/sequence': link:../../../packages/dds/sequence
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
     devDependencies:
       '@cerner/duplicate-package-checker-webpack-plugin': 2.3.0_webpack@4.46.0
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
@@ -4036,7 +3886,7 @@ importers:
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -4137,7 +3987,7 @@ importers:
       lodash: ^4.17.21
       nyc: ^15.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       source-map-support: ^0.5.16
       typedoc: ^0.12.0
       typescript: ~4.5.5
@@ -4176,7 +4026,7 @@ importers:
       lighthouse: 5.6.0
       nyc: 15.1.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3
       source-map-support: 0.5.21
       typedoc: 0.12.0
       typescript: 4.5.5
@@ -4365,7 +4215,7 @@ importers:
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
       '@fluidframework/sequence': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
       '@fluidframework/shared-object-base': ^0.59.3000
       '@fluidframework/test-runtime-utils': ^0.59.3000
       '@fluidframework/test-utils': ^0.59.3000
@@ -4493,7 +4343,7 @@ importers:
       enzyme: ^3.10.0
       enzyme-adapter-react-16: ^1.14.0
       eslint: ~8.6.0
-      extract-text-webpack-plugin: ^4.0.0-beta.0
+      html-webpack-plugin: ^4.5.2
       identity-obj-proxy: ^3.0.0
       istanbul-instrumenter-loader: ^3.0.1
       jest: ^26.6.3
@@ -4508,13 +4358,14 @@ importers:
       react-select: ^2.4.3
       react-virtualized-auto-sizer: ^1.0.2
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       source-map-support: ^0.5.16
-      svg-sprite-loader: ^4.1.6
+      svg-sprite-loader: ^6.0.11
       svgo: ^1.1.1
       svgo-loader: ^2.1.0
       ts-jest: ^26.4.4
-      tsconfig-paths-webpack-plugin: ^3.2.0
+      ts-loader: ^8.4.0
+      tsconfig-paths-webpack-plugin: ^3.5.2
       typescript: ~4.5.5
       webpack: ^4.46.0
       webpack-cli: ^4.9.2
@@ -4567,7 +4418,7 @@ importers:
       enzyme: 3.11.0
       enzyme-adapter-react-16: 1.15.6_enzyme@3.11.0
       eslint: 8.6.0
-      extract-text-webpack-plugin: 4.0.0-beta.0_webpack@4.46.0
+      html-webpack-plugin: 4.5.2_webpack@4.46.0
       identity-obj-proxy: 3.0.0
       istanbul-instrumenter-loader: 3.0.1_webpack@4.46.0
       jest: 26.6.3
@@ -4576,12 +4427,13 @@ importers:
       jsdoc: 3.6.7
       lighthouse: 5.6.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3_webpack@4.46.0
       source-map-support: 0.5.21
-      svg-sprite-loader: 4.3.0_webpack@4.46.0
+      svg-sprite-loader: 6.0.11
       svgo: 1.3.2
       svgo-loader: 2.2.2_svgo@1.3.2
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       tsconfig-paths-webpack-plugin: 3.5.2
       typescript: 4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -4687,10 +4539,10 @@ importers:
       jest-junit: ^10.0.0
       nyc: ^15.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       source-map-support: ^0.5.16
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
     dependencies:
       '@fluid-experimental/property-changeset': link:../property-changeset
@@ -4721,10 +4573,10 @@ importers:
       jest-junit: 10.0.0
       nyc: 15.1.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3
       source-map-support: 0.5.21
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5
       typescript: 4.5.5
 
   experimental/PropertyDDS/packages/property-query:
@@ -4932,6 +4784,7 @@ importers:
 
   experimental/dds/tree:
     specifiers:
+      '@fluid-internal/stochastic-test-utils': ^0.59.3000
       '@fluid-tools/benchmark': ^0.40.0
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-definitions': ^0.20.1
@@ -5001,6 +4854,7 @@ importers:
       sorted-btree: 1.8.0
       uuid: 8.3.2
     devDependencies:
+      '@fluid-internal/stochastic-test-utils': link:../../../packages/test/stochastic-test-utils
       '@fluid-tools/benchmark': 0.40.27919
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
       '@fluidframework/container-loader': link:../../../packages/loader/container-loader
@@ -5120,7 +4974,7 @@ importers:
       '@fluidframework/datastore-definitions': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
@@ -5242,7 +5096,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -5292,7 +5146,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -5428,7 +5282,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -5480,7 +5334,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -5532,7 +5386,7 @@ importers:
       react: ^16.10.2
       rimraf: ^2.6.2
       ts-jest: ^26.4.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -5583,7 +5437,7 @@ importers:
       puppeteer: 1.20.0
       rimraf: 2.7.1
       ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.5
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -5666,7 +5520,7 @@ importers:
       '@fluidframework/local-driver': ^0.59.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
       '@fluidframework/test-runtime-utils': ^0.59.3000
       '@fluidframework/test-tools': ^0.2.3074
       '@fluidframework/tinylicious-driver': ^0.59.3000
@@ -5869,6 +5723,7 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/cell-previous': npm:@fluidframework/cell@0.59.2000
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
@@ -5915,6 +5770,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/cell-previous': /@fluidframework/cell/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -5947,6 +5803,7 @@ importers:
   packages/dds/counter:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/counter-previous': npm:@fluidframework/counter@0.59.2000
@@ -5991,6 +5848,7 @@ importers:
       '@fluidframework/shared-object-base': link:../shared-object-base
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/counter-previous': /@fluidframework/counter/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6022,6 +5880,7 @@ importers:
   packages/dds/ink:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore-definitions': ^0.59.3000
@@ -6068,6 +5927,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/ink-previous': /@fluidframework/ink/0.59.2000
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6100,6 +5960,7 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-utils': ^0.59.3000
@@ -6154,6 +6015,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/map-previous': /@fluidframework/map/0.59.2000
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6187,6 +6049,7 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
@@ -6195,7 +6058,7 @@ importers:
       '@fluidframework/matrix-previous': npm:@fluidframework/matrix@0.59.2000
       '@fluidframework/merge-tree': ^0.59.3000
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
@@ -6250,6 +6113,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/matrix-previous': /@fluidframework/matrix/0.59.2000
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6287,6 +6151,7 @@ importers:
   packages/dds/merge-tree:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -6343,6 +6208,7 @@ importers:
       '@fluidframework/telemetry-utils': link:../../utils/telemetry-utils
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/merge-tree-previous': /@fluidframework/merge-tree/0.59.2000
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6381,6 +6247,7 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore-definitions': ^0.59.3000
@@ -6429,6 +6296,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/ordered-collection-previous': /@fluidframework/ordered-collection/0.59.2000
@@ -6543,12 +6411,13 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore-definitions': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/register-collection-previous': npm:@fluidframework/register-collection@0.59.2000
       '@fluidframework/runtime-definitions': ^0.59.3000
@@ -6589,6 +6458,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/register-collection-previous': /@fluidframework/register-collection/0.59.2000
@@ -6622,19 +6492,20 @@ importers:
     specifiers:
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore-definitions': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000-0
+      '@fluidframework/gitresources': ^0.1036.3000-0
       '@fluidframework/merge-tree': ^0.59.3000
       '@fluidframework/mocha-test-setup': ^0.59.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
       '@fluidframework/sequence-previous': npm:@fluidframework/sequence@0.59.2000
-      '@fluidframework/server-services-client': ^0.1036.2000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
       '@fluidframework/shared-object-base': ^0.59.3000
       '@fluidframework/telemetry-utils': ^0.59.3000
       '@fluidframework/test-runtime-utils': ^0.59.3000
@@ -6682,6 +6553,7 @@ importers:
     devDependencies:
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/gitresources': link:../../../server/routerlicious/packages/gitresources
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -6720,6 +6592,7 @@ importers:
   packages/dds/shared-object-base:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -6779,6 +6652,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/shared-object-base-previous': /@fluidframework/shared-object-base/0.59.2000
@@ -6813,6 +6687,7 @@ importers:
   packages/dds/shared-summary-block:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore-definitions': ^0.59.3000
@@ -6860,6 +6735,7 @@ importers:
       '@fluidframework/shared-object-base': link:../shared-object-base
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/shared-summary-block-previous': /@fluidframework/shared-summary-block/0.59.2000
@@ -6896,6 +6772,7 @@ importers:
       '@fluid-experimental/task-manager-previous': npm:@fluid-experimental/task-manager@0.59.2000
       '@fluid-internal/test-dds-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -6949,6 +6826,7 @@ importers:
       '@fluid-experimental/task-manager-previous': /@fluid-experimental/task-manager/0.59.2000
       '@fluid-internal/test-dds-utils': link:../test-dds-utils
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/test-runtime-utils': link:../../runtime/test-runtime-utils
@@ -7030,6 +6908,7 @@ importers:
   packages/dds/tree:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
@@ -7070,6 +6949,7 @@ importers:
       '@ungap/structured-clone': 0.3.4
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/test-runtime-utils': link:../../runtime/test-runtime-utils
@@ -7107,6 +6987,7 @@ importers:
   packages/drivers/debugger:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/debugger-previous': npm:@fluidframework/debugger@0.59.2000
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -7146,6 +7027,7 @@ importers:
       jsonschema: 1.4.0
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/debugger-previous': /@fluidframework/debugger/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -7239,6 +7121,7 @@ importers:
   packages/drivers/driver-web-cache:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/driver-web-cache-previous': npm:@fluidframework/driver-web-cache@0.59.2000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -7275,6 +7158,7 @@ importers:
       idb: 6.1.5
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/driver-web-cache-previous': /@fluidframework/driver-web-cache/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
@@ -7304,6 +7188,7 @@ importers:
   packages/drivers/file-driver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -7341,6 +7226,7 @@ importers:
       '@fluidframework/replay-driver': link:../replay-driver
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/file-driver-previous': /@fluidframework/file-driver/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -7368,6 +7254,7 @@ importers:
     specifiers:
       '@fluid-tools/fluidapp-odsp-urlresolver-previous': npm:@fluid-tools/fluidapp-odsp-urlresolver@0.59.2000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -7404,6 +7291,7 @@ importers:
     devDependencies:
       '@fluid-tools/fluidapp-odsp-urlresolver-previous': /@fluid-tools/fluidapp-odsp-urlresolver/0.59.2000
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -7516,10 +7404,10 @@ importers:
       '@fluidframework/mocha-test-setup': ^0.59.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
-      '@fluidframework/server-services-client': ^0.1036.2000-0
-      '@fluidframework/server-services-core': ^0.1036.2000-0
-      '@fluidframework/server-test-utils': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
+      '@fluidframework/server-services-core': ^0.1036.3000-0
+      '@fluidframework/server-test-utils': ^0.1036.3000-0
       '@rushstack/eslint-config': ^2.5.1
       '@types/jsrsasign': ^8.0.8
       '@types/mocha': ^8.2.2
@@ -7594,6 +7482,7 @@ importers:
   packages/drivers/odsp-driver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
@@ -7601,12 +7490,12 @@ importers:
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/driver-utils': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000-0
+      '@fluidframework/gitresources': ^0.1036.3000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
       '@fluidframework/odsp-doclib-utils': ^0.59.3000
       '@fluidframework/odsp-driver-definitions': ^0.59.3000
       '@fluidframework/odsp-driver-previous': npm:@fluidframework/odsp-driver@0.59.2000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/telemetry-utils': ^0.59.3000
       '@microsoft/api-extractor': ^7.22.2
@@ -7658,6 +7547,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/odsp-driver-previous': /@fluidframework/odsp-driver/0.59.2000
@@ -7691,6 +7581,7 @@ importers:
   packages/drivers/odsp-driver-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/odsp-driver-definitions-previous': npm:@fluidframework/odsp-driver-definitions@0.59.2000
@@ -7719,6 +7610,7 @@ importers:
       '@fluidframework/driver-definitions': link:../../../common/lib/driver-definitions
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/odsp-driver-definitions-previous': /@fluidframework/odsp-driver-definitions/0.59.2000
       '@fluidframework/protocol-definitions': link:../../../common/lib/protocol-definitions
@@ -7746,6 +7638,7 @@ importers:
   packages/drivers/odsp-urlResolver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -7780,6 +7673,7 @@ importers:
       '@fluidframework/odsp-driver-definitions': link:../odsp-driver-definitions
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/odsp-urlresolver-previous': /@fluidframework/odsp-urlresolver/0.59.2000
@@ -7807,6 +7701,7 @@ importers:
   packages/drivers/replay-driver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -7848,6 +7743,7 @@ importers:
       '@fluidframework/telemetry-utils': link:../../utils/telemetry-utils
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/replay-driver-previous': /@fluidframework/replay-driver/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -7878,18 +7774,19 @@ importers:
   packages/drivers/routerlicious-driver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/driver-base': ^0.59.3000
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/driver-utils': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000-0
+      '@fluidframework/gitresources': ^0.1036.3000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver-previous': npm:@fluidframework/routerlicious-driver@0.59.2000
-      '@fluidframework/server-services-client': ^0.1036.2000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
       '@fluidframework/telemetry-utils': ^0.59.3000
       '@microsoft/api-extractor': ^7.22.2
       '@rushstack/eslint-config': ^2.5.1
@@ -7942,6 +7839,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/routerlicious-driver-previous': /@fluidframework/routerlicious-driver/0.59.2000
@@ -7977,6 +7875,7 @@ importers:
   packages/drivers/routerlicious-host:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -8011,6 +7910,7 @@ importers:
       axios: 0.26.1
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/protocol-definitions': link:../../../common/lib/protocol-definitions
       '@fluidframework/routerlicious-host-previous': /@fluidframework/routerlicious-host/0.59.2000
@@ -8038,6 +7938,7 @@ importers:
   packages/drivers/routerlicious-urlResolver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -8077,6 +7978,7 @@ importers:
       nconf: 0.11.4
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/routerlicious-urlresolver-previous': /@fluidframework/routerlicious-urlresolver/0.59.2000
@@ -8107,13 +8009,14 @@ importers:
   packages/drivers/tinylicious-driver:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/driver-utils': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver': ^0.59.3000
-      '@fluidframework/server-services-client': ^0.1036.2000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
       '@fluidframework/test-tools': ^0.2.3074
       '@fluidframework/tinylicious-driver-previous': npm:@fluidframework/tinylicious-driver@0.59.2000
       '@rushstack/eslint-config': ^2.5.1
@@ -8150,6 +8053,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/test-tools': 0.2.3074
       '@fluidframework/tinylicious-driver-previous': /@fluidframework/tinylicious-driver/0.59.2000
@@ -8179,6 +8083,7 @@ importers:
     specifiers:
       '@fluidframework/aqueduct-previous': npm:@fluidframework/aqueduct@0.59.2000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -8241,6 +8146,7 @@ importers:
     devDependencies:
       '@fluidframework/aqueduct-previous': /@fluidframework/aqueduct/0.59.2000
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@microsoft/api-extractor': 7.22.2
@@ -8274,6 +8180,7 @@ importers:
       '@fluidframework/azure-client-previous': npm:@fluidframework/azure-client@0.59.2000
       '@fluidframework/azure-local-service': ^0.1.38773
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/container-definitions': ^0.48.1000
       '@fluidframework/container-loader': ^0.59.3000
@@ -8286,7 +8193,7 @@ importers:
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
-      '@fluidframework/server-services-client': ^0.1036.2000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
       '@fluidframework/test-client-utils': ^0.59.3000
       '@microsoft/api-extractor': ^7.22.2
       '@rushstack/eslint-config': ^2.5.1
@@ -8321,6 +8228,7 @@ importers:
       '@fluidframework/azure-client-previous': /@fluidframework/azure-client/0.59.2000
       '@fluidframework/azure-local-service': 0.1.38773
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/test-client-utils': link:../test-client-utils
       '@microsoft/api-extractor': 7.22.2
@@ -8339,6 +8247,7 @@ importers:
     specifiers:
       '@fluidframework/azure-service-utils-previous': npm:@fluidframework/azure-service-utils@0.59.2000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@microsoft/api-extractor': ^7.22.2
@@ -8370,6 +8279,7 @@ importers:
     devDependencies:
       '@fluidframework/azure-service-utils-previous': /@fluidframework/azure-service-utils/0.59.2000
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -8476,6 +8386,7 @@ importers:
   packages/framework/dds-interceptions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/dds-interceptions-previous': npm:@fluidframework/dds-interceptions@0.59.2000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -8521,6 +8432,7 @@ importers:
       '@fluidframework/sequence': link:../../dds/sequence
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/dds-interceptions-previous': /@fluidframework/dds-interceptions/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -8557,6 +8469,7 @@ importers:
   packages/framework/fluid-framework:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/container-definitions': ^0.48.1000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/fluid-static': ^0.59.3000
@@ -8591,6 +8504,7 @@ importers:
       '@fluidframework/sequence': link:../../dds/sequence
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@microsoft/api-extractor': 7.22.2
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -8620,6 +8534,7 @@ importers:
       '@fluid-experimental/get-container': ^0.59.3000
       '@fluidframework/aqueduct': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -8670,6 +8585,7 @@ importers:
     devDependencies:
       '@fluid-experimental/get-container': link:../../../experimental/framework/get-container
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/fluid-static-previous': /@fluidframework/fluid-static/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -8697,6 +8613,7 @@ importers:
   packages/framework/request-handler:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-runtime-definitions': ^0.59.3000
       '@fluidframework/core-interfaces': ^0.43.1000
@@ -8741,6 +8658,7 @@ importers:
       '@fluidframework/runtime-utils': link:../../runtime/runtime-utils
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/request-handler-previous': /@fluidframework/request-handler/0.59.2000
@@ -8776,6 +8694,7 @@ importers:
   packages/framework/synthesize:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/datastore': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -8807,6 +8726,7 @@ importers:
       typescript-formatter: 7.1.0
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/core-interfaces': link:../../../common/lib/core-interfaces
       '@fluidframework/datastore': link:../../runtime/datastore
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
@@ -8840,6 +8760,7 @@ importers:
   packages/framework/test-client-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/test-client-utils-previous': npm:@fluidframework/test-client-utils@0.59.2000
@@ -8870,6 +8791,7 @@ importers:
       sillyname: 0.1.0
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/test-client-utils-previous': /@fluidframework/test-client-utils/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -8895,6 +8817,7 @@ importers:
   packages/framework/tinylicious-client:
     specifiers:
       '@fluidframework/aqueduct': ^0.59.3000
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -8937,6 +8860,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/aqueduct': link:../aqueduct
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/tinylicious-client-previous': /@fluidframework/tinylicious-client/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -8954,6 +8878,7 @@ importers:
   packages/framework/undo-redo:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/map': ^0.59.3000
       '@fluidframework/matrix': ^0.59.3000
@@ -8997,6 +8922,7 @@ importers:
       '@fluidframework/sequence': link:../../dds/sequence
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/test-runtime-utils': link:../../runtime/test-runtime-utils
@@ -9145,6 +9071,7 @@ importers:
   packages/loader/container-loader:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -9155,7 +9082,7 @@ importers:
       '@fluidframework/driver-utils': ^0.59.3000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/telemetry-utils': ^0.59.3000
       '@fluidframework/test-loader-utils': ^0.59.3000
@@ -9208,6 +9135,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/container-loader-previous': /@fluidframework/container-loader/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9244,6 +9172,7 @@ importers:
   packages/loader/container-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -9284,6 +9213,7 @@ importers:
       '@fluidframework/telemetry-utils': link:../../utils/telemetry-utils
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/container-utils-previous': /@fluidframework/container-utils/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9315,15 +9245,16 @@ importers:
   packages/loader/driver-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/core-interfaces': ^0.43.1000
       '@fluidframework/driver-definitions': ^0.46.1000
       '@fluidframework/driver-utils-previous': npm:@fluidframework/driver-utils@0.59.2000
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000-0
+      '@fluidframework/gitresources': ^0.1036.3000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-utils': ^0.59.3000
       '@fluidframework/telemetry-utils': ^0.59.3000
@@ -9366,6 +9297,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/driver-utils-previous': /@fluidframework/driver-utils/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9477,7 +9409,7 @@ importers:
       eslint-plugin-unicorn: ~40.0.0
       isomorphic-fetch: ^3.0.0
       rimraf: ^2.6.2
-      source-map-loader: ^0.2.4
+      source-map-loader: ^1.1.3
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
     dependencies:
@@ -9507,7 +9439,7 @@ importers:
       eslint-plugin-tsdoc: 0.2.16
       eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
+      source-map-loader: 1.1.3
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
 
@@ -9589,7 +9521,7 @@ importers:
   packages/runtime/container-runtime:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
-      '@fluidframework/build-tools': ^0.2.64540
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -9603,7 +9535,7 @@ importers:
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/garbage-collector': ^0.59.3000
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
@@ -9659,7 +9591,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
-      '@fluidframework/build-tools': 0.2.64540
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/container-runtime-previous': /@fluidframework/container-runtime/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9759,6 +9691,7 @@ importers:
   packages/runtime/datastore:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -9771,7 +9704,7 @@ importers:
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/garbage-collector': ^0.59.3000
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
@@ -9823,6 +9756,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/datastore-previous': /@fluidframework/datastore/0.59.2000
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9919,6 +9853,7 @@ importers:
   packages/runtime/garbage-collector:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -9954,6 +9889,7 @@ importers:
       '@fluidframework/runtime-definitions': link:../runtime-definitions
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/garbage-collector-previous': /@fluidframework/garbage-collector/0.59.2000
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
@@ -9984,6 +9920,7 @@ importers:
   packages/runtime/runtime-definitions:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -10022,6 +9959,7 @@ importers:
       '@types/node': 14.18.13
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/runtime-definitions-previous': /@fluidframework/runtime-definitions/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -10047,6 +9985,7 @@ importers:
   packages/runtime/runtime-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -10056,7 +9995,7 @@ importers:
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/garbage-collector': ^0.59.3000
       '@fluidframework/mocha-test-setup': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils-previous': npm:@fluidframework/runtime-utils@0.59.2000
@@ -10101,6 +10040,7 @@ importers:
       '@fluidframework/telemetry-utils': link:../../utils/telemetry-utils
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/runtime-utils-previous': /@fluidframework/runtime-utils/0.59.2000
@@ -10135,6 +10075,7 @@ importers:
     specifiers:
       '@fluidframework/azure-service-utils': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -10195,6 +10136,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/test-runtime-utils-previous': /@fluidframework/test-runtime-utils/0.59.2000
@@ -10255,7 +10197,7 @@ importers:
       mocha: ^8.4.0
       nyc: ^15.0.0
       rimraf: ^2.6.2
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       webpack: ^4.46.0
@@ -10290,7 +10232,7 @@ importers:
       mocha: 8.4.0
       nyc: 15.1.0
       rimraf: 2.7.1
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -10330,7 +10272,7 @@ importers:
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
       '@fluidframework/sequence': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
       '@fluidframework/shared-object-base': ^0.59.3000
       '@fluidframework/telemetry-utils': ^0.59.3000
       '@fluidframework/test-loader-utils': ^0.59.3000
@@ -10360,7 +10302,7 @@ importers:
       nock: ^10.0.1
       nyc: ^15.0.0
       rimraf: ^2.6.2
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -10429,7 +10371,7 @@ importers:
       nock: 10.0.6
       nyc: 15.1.0
       rimraf: 2.7.1
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       uuid: 8.3.2
@@ -10521,7 +10463,7 @@ importers:
       '@fluidframework/register-collection': ^0.59.3000
       '@fluidframework/replay-driver': ^0.59.3000
       '@fluidframework/sequence': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
       '@fluidframework/test-utils': ^0.59.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/mocha': ^8.2.2
@@ -10578,6 +10520,67 @@ importers:
       '@typescript-eslint/parser': 5.9.1_eslint@8.6.0+typescript@4.5.5
       concurrently: 6.5.1
       cross-env: 7.0.3
+      eslint: 8.6.0
+      eslint-plugin-editorconfig: 3.2.0_e5f75ba3e61c3bbc57c37e610846ef7c
+      eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
+      eslint-plugin-import: 2.25.4_eslint@8.6.0
+      eslint-plugin-jest: 26.1.4_c64849377e9f83cba16eb6e13b8a0018
+      eslint-plugin-mocha: 10.0.4_eslint@8.6.0
+      eslint-plugin-promise: 6.0.0_eslint@8.6.0
+      eslint-plugin-react: 7.28.0_eslint@8.6.0
+      eslint-plugin-tsdoc: 0.2.16
+      eslint-plugin-unicorn: 40.0.0_eslint@8.6.0
+      mocha: 8.4.0
+      nyc: 15.1.0
+      rimraf: 2.7.1
+      typescript: 4.5.5
+      typescript-formatter: 7.1.0_typescript@4.5.5
+
+  packages/test/stochastic-test-utils:
+    specifiers:
+      '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/common-utils': ^0.32.1
+      '@fluidframework/eslint-config-fluid': ^0.28.2000-0
+      '@fluidframework/mocha-test-setup': ^0.59.3000
+      '@rushstack/eslint-config': ^2.5.1
+      '@types/mocha': ^8.2.2
+      '@types/node': ^14.18.0
+      '@types/random-js': ^1.0.31
+      '@typescript-eslint/eslint-plugin': ~5.9.0
+      '@typescript-eslint/parser': ~5.9.0
+      concurrently: ^6.2.0
+      copyfiles: ^2.1.0
+      eslint: ~8.6.0
+      eslint-plugin-editorconfig: ~3.2.0
+      eslint-plugin-eslint-comments: ~3.2.0
+      eslint-plugin-import: ~2.25.4
+      eslint-plugin-jest: ~26.1.3
+      eslint-plugin-mocha: ~10.0.3
+      eslint-plugin-promise: ~6.0.0
+      eslint-plugin-react: ~7.28.0
+      eslint-plugin-tsdoc: ~0.2.14
+      eslint-plugin-unicorn: ~40.0.0
+      mocha: ^8.4.0
+      nyc: ^15.0.0
+      random-js: ^1.0.8
+      rimraf: ^2.6.2
+      typescript: ~4.5.5
+      typescript-formatter: 7.1.0
+    dependencies:
+      '@fluidframework/common-utils': 0.32.1
+      random-js: 1.0.8
+    devDependencies:
+      '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
+      '@fluidframework/mocha-test-setup': link:../mocha-test-setup
+      '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
+      '@types/mocha': 8.2.3
+      '@types/node': 14.18.13
+      '@types/random-js': 1.0.31
+      '@typescript-eslint/eslint-plugin': 5.9.1_46ff1e3eeda39b5395c18b563a83af7a
+      '@typescript-eslint/parser': 5.9.1_eslint@8.6.0+typescript@4.5.5
+      concurrently: 6.5.1
+      copyfiles: 2.4.1
       eslint: 8.6.0
       eslint-plugin-editorconfig: 3.2.0_e5f75ba3e61c3bbc57c37e610846ef7c
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
@@ -10737,7 +10740,7 @@ importers:
       '@fluidframework/odsp-urlresolver': ^0.59.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/routerlicious-driver': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
       '@fluidframework/test-driver-definitions': ^0.59.3000
       '@fluidframework/test-drivers-previous': npm:@fluidframework/test-drivers@0.59.2000
       '@fluidframework/test-pairwise-generator': ^0.59.3000
@@ -11032,6 +11035,7 @@ importers:
       '@fluid-experimental/task-manager': ^0.59.3000
       '@fluidframework/aqueduct': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -11107,6 +11111,7 @@ importers:
       random-js: 1.0.8
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../mocha-test-setup
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -11138,6 +11143,7 @@ importers:
     specifiers:
       '@fluidframework/aqueduct': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
@@ -11217,6 +11223,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/test-utils-previous': /@fluidframework/test-utils/0.59.2000
       '@microsoft/api-extractor': 7.22.2
@@ -11251,6 +11258,7 @@ importers:
     specifiers:
       '@fluidframework/aqueduct': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/cell': ^0.59.3000
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
@@ -11302,7 +11310,7 @@ importers:
       proper-lockfile: ^4.1.2
       rimraf: ^2.6.2
       semver: ^7.3.4
-      ts-loader: ^6.1.2
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -11338,6 +11346,7 @@ importers:
       semver: 7.3.7
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/test-version-utils-previous': /@fluidframework/test-version-utils/0.59.2000
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -11363,7 +11372,7 @@ importers:
       nock: 10.0.6
       nyc: 15.1.0
       rimraf: 2.7.1
-      ts-loader: 6.2.2_typescript@4.5.5
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       uuid: 8.3.2
@@ -11624,6 +11633,7 @@ importers:
       '@fluid-tools/webpack-fluid-loader-previous': npm:@fluid-tools/webpack-fluid-loader@0.59.2000
       '@fluidframework/aqueduct': ^0.59.3000
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/container-definitions': ^0.48.1000
       '@fluidframework/container-loader': ^0.59.3000
@@ -11640,8 +11650,8 @@ importers:
       '@fluidframework/routerlicious-driver': ^0.59.3000
       '@fluidframework/runtime-definitions': ^0.59.3000
       '@fluidframework/runtime-utils': ^0.59.3000
-      '@fluidframework/server-local-server': ^0.1036.2000-0
-      '@fluidframework/server-services-client': ^0.1036.2000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
       '@fluidframework/test-runtime-utils': ^0.59.3000
       '@fluidframework/tool-utils': ^0.59.3000
       '@fluidframework/view-adapters': ^0.59.3000
@@ -11674,8 +11684,8 @@ importers:
       nyc: ^15.0.0
       rimraf: ^2.6.2
       sillyname: ^0.1.0
-      source-map-loader: ^0.2.4
-      ts-loader: ^6.1.2
+      source-map-loader: ^1.1.3
+      ts-loader: ^8.4.0
       typescript: ~4.5.5
       typescript-formatter: 7.1.0
       uuid: ^8.3.1
@@ -11714,6 +11724,7 @@ importers:
     devDependencies:
       '@fluid-tools/webpack-fluid-loader-previous': /@fluid-tools/webpack-fluid-loader/0.59.2000_2c45d7dbd3053847d9550447b8911129
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@rushstack/eslint-config': 2.5.4_eslint@8.6.0+typescript@4.5.5
@@ -11739,8 +11750,8 @@ importers:
       mocha: 8.4.0
       nyc: 15.1.0
       rimraf: 2.7.1
-      source-map-loader: 0.2.4
-      ts-loader: 6.2.2_typescript@4.5.5
+      source-map-loader: 1.1.3_webpack@4.46.0
+      ts-loader: 8.4.0_typescript@4.5.5+webpack@4.46.0
       typescript: 4.5.5
       typescript-formatter: 7.1.0_typescript@4.5.5
       webpack: 4.46.0_webpack-cli@4.9.2
@@ -11749,6 +11760,7 @@ importers:
   packages/utils/odsp-doclib-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/driver-definitions': ^0.46.1000
@@ -11791,6 +11803,7 @@ importers:
       node-fetch: 2.6.7
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/odsp-doclib-utils-previous': /@fluidframework/odsp-doclib-utils/0.59.2000
@@ -11820,6 +11833,7 @@ importers:
   packages/utils/telemetry-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
@@ -11862,6 +11876,7 @@ importers:
       uuid: 8.3.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/telemetry-utils-previous': /@fluidframework/telemetry-utils/0.59.2000
@@ -11895,11 +11910,12 @@ importers:
   packages/utils/tool-utils:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
+      '@fluidframework/build-tools': ^0.2.65117
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/mocha-test-setup': ^0.59.3000
       '@fluidframework/odsp-doclib-utils': ^0.59.3000
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@fluidframework/tool-utils-previous': npm:@fluidframework/tool-utils@0.59.2000
       '@microsoft/api-extractor': ^7.22.2
@@ -11943,6 +11959,7 @@ importers:
       proper-lockfile: 4.1.2
     devDependencies:
       '@fluidframework/build-common': 0.23.0_typescript@4.5.5
+      '@fluidframework/build-tools': 0.2.65117
       '@fluidframework/eslint-config-fluid': 0.28.2000-64187_eslint@8.6.0+typescript@4.5.5
       '@fluidframework/mocha-test-setup': link:../../test/mocha-test-setup
       '@fluidframework/tool-utils-previous': /@fluidframework/tool-utils/0.59.2000
@@ -12088,7 +12105,7 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-core': ^0.1036.2000
+      '@fluidframework/server-services-core': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/node': ^14.18.0
       '@typescript-eslint/eslint-plugin': ~5.9.0
@@ -12138,14 +12155,14 @@ importers:
       '@fluidframework/common-definitions': ^0.20.1
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
-      '@fluidframework/protocol-base': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
+      '@fluidframework/protocol-base': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-lambdas-driver': ^0.1036.2000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-lambdas-driver': ^0.1036.3000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/async': ^3.2.9
       '@types/json-stringify-safe': ^5.0.0
@@ -12244,10 +12261,10 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/async': ^3.2.9
       '@types/lodash': ^4.14.118
@@ -12314,12 +12331,12 @@ importers:
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-lambdas': ^0.1036.2000
-      '@fluidframework/server-memory-orderer': ^0.1036.2000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-lambdas': ^0.1036.3000
+      '@fluidframework/server-memory-orderer': ^0.1036.3000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/jsrsasign': ^8.0.8
       '@types/mocha': ^8.2.2
@@ -12402,12 +12419,12 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/protocol-base': ^0.1036.2000
+      '@fluidframework/protocol-base': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-lambdas': ^0.1036.2000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
+      '@fluidframework/server-lambdas': ^0.1036.3000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/debug': ^4.1.5
       '@types/double-ended-queue': ^2.1.0
@@ -12489,7 +12506,7 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@microsoft/api-extractor': ^7.22.2
       '@rushstack/eslint-config': ^2.5.1
@@ -12556,21 +12573,21 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-kafka-orderer': ^0.1036.2000
-      '@fluidframework/server-lambdas': ^0.1036.2000
-      '@fluidframework/server-lambdas-driver': ^0.1036.2000
-      '@fluidframework/server-local-server': ^0.1036.2000
-      '@fluidframework/server-memory-orderer': ^0.1036.2000
-      '@fluidframework/server-routerlicious-base': ^0.1036.2000
-      '@fluidframework/server-services': ^0.1036.2000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-shared': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-services-utils': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-kafka-orderer': ^0.1036.3000
+      '@fluidframework/server-lambdas': ^0.1036.3000
+      '@fluidframework/server-lambdas-driver': ^0.1036.3000
+      '@fluidframework/server-local-server': ^0.1036.3000
+      '@fluidframework/server-memory-orderer': ^0.1036.3000
+      '@fluidframework/server-routerlicious-base': ^0.1036.3000
+      '@fluidframework/server-services': ^0.1036.3000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-shared': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-services-utils': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/ioredis': ^4.22.0
       '@types/nconf': ^0.10.2
@@ -12651,22 +12668,22 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-kafka-orderer': ^0.1036.2000
-      '@fluidframework/server-lambdas': ^0.1036.2000
-      '@fluidframework/server-lambdas-driver': ^0.1036.2000
-      '@fluidframework/server-local-server': ^0.1036.2000
-      '@fluidframework/server-memory-orderer': ^0.1036.2000
-      '@fluidframework/server-services': ^0.1036.2000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-ordering-kafkanode': ^0.1036.2000
-      '@fluidframework/server-services-ordering-rdkafka': ^0.1036.2000
-      '@fluidframework/server-services-ordering-zookeeper': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-services-utils': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-kafka-orderer': ^0.1036.3000
+      '@fluidframework/server-lambdas': ^0.1036.3000
+      '@fluidframework/server-lambdas-driver': ^0.1036.3000
+      '@fluidframework/server-local-server': ^0.1036.3000
+      '@fluidframework/server-memory-orderer': ^0.1036.3000
+      '@fluidframework/server-services': ^0.1036.3000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-ordering-kafkanode': ^0.1036.3000
+      '@fluidframework/server-services-ordering-rdkafka': ^0.1036.3000
+      '@fluidframework/server-services-ordering-zookeeper': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-services-utils': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/bytes': ^3.0.0
       '@types/compression': 0.0.33
@@ -12805,14 +12822,14 @@ importers:
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-ordering-kafkanode': ^0.1036.2000
-      '@fluidframework/server-services-ordering-rdkafka': ^0.1036.2000
-      '@fluidframework/server-services-shared': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-services-utils': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-ordering-kafkanode': ^0.1036.3000
+      '@fluidframework/server-services-ordering-rdkafka': ^0.1036.3000
+      '@fluidframework/server-services-shared': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-services-utils': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@socket.io/redis-emitter': ^4.1.0
       '@types/amqplib': ^0.5.17
@@ -12917,8 +12934,8 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
-      '@fluidframework/protocol-base': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
+      '@fluidframework/protocol-base': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
       '@microsoft/api-extractor': ^7.22.2
       '@rushstack/eslint-config': ^2.5.1
@@ -13004,10 +13021,10 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/nconf': ^0.10.2
       '@types/node': ^14.18.0
@@ -13064,9 +13081,9 @@ importers:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-ordering-zookeeper': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-ordering-zookeeper': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/debug': ^4.1.5
       '@types/lru-cache': ^5.1.0
@@ -13136,8 +13153,8 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/amqplib': ^0.5.17
       '@types/debug': ^4.1.5
@@ -13208,8 +13225,8 @@ importers:
     specifiers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/debug': ^4.1.5
       '@types/lru-cache': ^5.1.0
@@ -13274,12 +13291,12 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
-      '@fluidframework/protocol-base': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
+      '@fluidframework/protocol-base': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@socket.io/redis-adapter': ^7.0.0
       '@types/debug': ^4.1.5
@@ -13448,10 +13465,10 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
-      '@fluidframework/server-test-utils': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
+      '@fluidframework/server-test-utils': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/debug': ^4.1.5
       '@types/ioredis': ^4.22.0
@@ -13543,12 +13560,12 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000
-      '@fluidframework/protocol-base': ^0.1036.2000
+      '@fluidframework/gitresources': ^0.1036.3000
+      '@fluidframework/protocol-base': ^0.1036.3000
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-services-client': ^0.1036.2000
-      '@fluidframework/server-services-core': ^0.1036.2000
-      '@fluidframework/server-services-telemetry': ^0.1036.2000
+      '@fluidframework/server-services-client': ^0.1036.3000
+      '@fluidframework/server-services-core': ^0.1036.3000
+      '@fluidframework/server-services-telemetry': ^0.1036.3000
       '@rushstack/eslint-config': ^2.5.1
       '@types/lodash': ^4.14.118
       '@types/mocha': ^8.2.2
@@ -13624,19 +13641,19 @@ importers:
       '@fluidframework/build-common': ^0.23.0
       '@fluidframework/common-utils': ^0.32.1
       '@fluidframework/eslint-config-fluid': ^0.28.2000-0
-      '@fluidframework/gitresources': ^0.1036.2000-0
+      '@fluidframework/gitresources': ^0.1036.3000-0
       '@fluidframework/mocha-test-setup': ^0.27.0
-      '@fluidframework/protocol-base': ^0.1036.2000-0
+      '@fluidframework/protocol-base': ^0.1036.3000-0
       '@fluidframework/protocol-definitions': ^0.1028.1000
-      '@fluidframework/server-lambdas': ^0.1036.2000-0
-      '@fluidframework/server-local-server': ^0.1036.2000-0
-      '@fluidframework/server-memory-orderer': ^0.1036.2000-0
-      '@fluidframework/server-services-client': ^0.1036.2000-0
-      '@fluidframework/server-services-core': ^0.1036.2000-0
-      '@fluidframework/server-services-shared': ^0.1036.2000-0
-      '@fluidframework/server-services-telemetry': ^0.1036.2000-0
-      '@fluidframework/server-services-utils': ^0.1036.2000-0
-      '@fluidframework/server-test-utils': ^0.1036.2000-0
+      '@fluidframework/server-lambdas': ^0.1036.3000-0
+      '@fluidframework/server-local-server': ^0.1036.3000-0
+      '@fluidframework/server-memory-orderer': ^0.1036.3000-0
+      '@fluidframework/server-services-client': ^0.1036.3000-0
+      '@fluidframework/server-services-core': ^0.1036.3000-0
+      '@fluidframework/server-services-shared': ^0.1036.3000-0
+      '@fluidframework/server-services-telemetry': ^0.1036.3000-0
+      '@fluidframework/server-services-utils': ^0.1036.3000-0
+      '@fluidframework/server-test-utils': ^0.1036.3000-0
       '@microsoft/api-extractor': ^7.22.2
       '@rushstack/eslint-config': ^2.5.1
       '@types/bytes': ^3.1.0
@@ -16081,8 +16098,8 @@ packages:
       typescript: 4.5.5
     dev: true
 
-  /@fluidframework/build-tools/0.2.64540:
-    resolution: {integrity: sha512-mqmezRhvyYlqV7pJ/wKWvGVDuRbj3oLLxDzORBpQVhiIFCxdk2uPclGVdan81lNdjdm02Ex4uklyk0hfWZbrNA==}
+  /@fluidframework/build-tools/0.2.65117:
+    resolution: {integrity: sha512-r47Ap/LRMeSD62Gs+/jxSIccGGNTKDpmLt8hpohFHyF7wYRpsYsvw9Hyidki9cTSCZArsMhgsvH9HJ4t4/JOOg==}
     hasBin: true
     dependencies:
       '@fluidframework/bundle-size-tools': 0.0.8505
@@ -23043,14 +23060,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@typescript-eslint/scope-manager/5.20.0:
-    resolution: {integrity: sha512-h9KtuPZ4D/JuX7rpp1iKg3zOH0WNEa+ZIXwpW/KWmEFDxlA/HSfCMhiyF1HS/drTICjIbpA6OqkAhrP/zkCStg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      '@typescript-eslint/types': 5.20.0
-      '@typescript-eslint/visitor-keys': 5.20.0
-    dev: true
-
   /@typescript-eslint/scope-manager/5.21.0:
     resolution: {integrity: sha512-XTX0g0IhvzcH/e3393SvjRCfYQxgxtYzL3UREteUneo72EFlt7UNoiYnikUtmGVobTbhUDByhJ4xRBNe+34kOQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -23110,11 +23119,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@typescript-eslint/types/5.20.0:
-    resolution: {integrity: sha512-+d8wprF9GyvPwtoB4CxBAR/s0rpP25XKgnOvMf/gMXYDvlUC3rPFHupdTQ/ow9vn7UDe5rX02ovGYQbv/IUCbg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
   /@typescript-eslint/types/5.21.0:
     resolution: {integrity: sha512-XnOOo5Wc2cBlq8Lh5WNvAgHzpjnEzxn4CJBwGkcau7b/tZ556qrWXQz4DJyChYg8JZAD06kczrdgFPpEQZfDsA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -23143,27 +23147,6 @@ packages:
       is-glob: 4.0.3
       lodash: 4.17.21
       semver: 6.3.0
-      tsutils: 3.21.0_typescript@4.5.5
-      typescript: 4.5.5
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/typescript-estree/5.20.0_typescript@4.5.5:
-    resolution: {integrity: sha512-36xLjP/+bXusLMrT9fMMYy1KJAGgHhlER2TqpUVDYUQg4w0q/NW/sg4UGAgVwAqb8V4zYg43KMUpM8vV2lve6w==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 5.20.0
-      '@typescript-eslint/visitor-keys': 5.20.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      semver: 7.3.7
       tsutils: 3.21.0_typescript@4.5.5
       typescript: 4.5.5
     transitivePeerDependencies:
@@ -23231,24 +23214,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@typescript-eslint/utils/5.20.0_eslint@8.6.0+typescript@4.5.5:
-    resolution: {integrity: sha512-lHONGJL1LIO12Ujyx8L8xKbwWSkoUKFSO+0wDAqGXiudWB2EO7WEUT+YZLtVbmOmSllAjLb9tpoIPwpRe5Tn6w==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      '@types/json-schema': 7.0.11
-      '@typescript-eslint/scope-manager': 5.20.0
-      '@typescript-eslint/types': 5.20.0
-      '@typescript-eslint/typescript-estree': 5.20.0_typescript@4.5.5
-      eslint: 8.6.0
-      eslint-scope: 5.1.1
-      eslint-utils: 3.0.0_eslint@8.6.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
   /@typescript-eslint/utils/5.21.0_eslint@8.14.0+typescript@4.5.5:
     resolution: {integrity: sha512-q/emogbND9wry7zxy7VYri+7ydawo2HDZhRZ5k6yggIvXa7PvBbAAZ4PFH/oZLem72ezC4Pr63rJvDK/sTlL8Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -23267,12 +23232,22 @@ packages:
       - typescript
     dev: true
 
-  /@typescript-eslint/visitor-keys/5.20.0:
-    resolution: {integrity: sha512-1flRpNF+0CAQkMNlTJ6L/Z5jiODG/e5+7mk6XwtPOUS3UrTz3UOiAg9jG2VtKsWI6rZQfy4C6a232QNRZTRGlg==}
+  /@typescript-eslint/utils/5.21.0_eslint@8.6.0+typescript@4.5.5:
+    resolution: {integrity: sha512-q/emogbND9wry7zxy7VYri+7ydawo2HDZhRZ5k6yggIvXa7PvBbAAZ4PFH/oZLem72ezC4Pr63rJvDK/sTlL8Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      '@typescript-eslint/types': 5.20.0
-      eslint-visitor-keys: 3.3.0
+      '@types/json-schema': 7.0.11
+      '@typescript-eslint/scope-manager': 5.21.0
+      '@typescript-eslint/types': 5.21.0
+      '@typescript-eslint/typescript-estree': 5.21.0_typescript@4.5.5
+      eslint: 8.6.0
+      eslint-scope: 5.1.1
+      eslint-utils: 3.0.0_eslint@8.6.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /@typescript-eslint/visitor-keys/5.21.0:
@@ -23626,7 +23601,6 @@ packages:
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
-    dev: true
 
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
@@ -24304,11 +24278,6 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.4.0
-    dev: true
-
-  /ast-types/0.9.6:
-    resolution: {integrity: sha1-ECyenpAF0+fjgpvwxPok7oYu6bk=}
-    engines: {node: '>= 0.8'}
     dev: true
 
   /astral-regex/1.0.0:
@@ -25161,10 +25130,6 @@ packages:
       tryer: 1.0.1
     dev: true
 
-  /big.js/3.2.0:
-    resolution: {integrity: sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==}
-    dev: true
-
   /big.js/5.2.2:
     resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
 
@@ -25714,13 +25679,6 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /camel-case/3.0.0:
-    resolution: {integrity: sha1-yjw2iKTpzzpM2nd9xNy8cTJJz3M=}
-    dependencies:
-      no-case: 2.3.2
-      upper-case: 1.1.3
-    dev: true
-
   /camel-case/4.1.1:
     resolution: {integrity: sha512-7fa2WcG4fYFkclIvEmxBbTvmibwF2/agfEBc6q3lOpVu0A13ltLsA+Hr/8Hp6kp5f+G7hKi6t8lys6XxP+1K6Q==}
     dependencies:
@@ -26127,6 +26085,13 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /clean-css/5.3.0:
+    resolution: {integrity: sha512-YYuuxv4H/iNb1Z/5IbMRoxgrzjWGhOEFfd+groZ5dMCVkpENiMZmwspdrzBo9286JjM1gZJPAyL7ZIdzuvu2AQ==}
+    engines: {node: '>= 10.0'}
+    dependencies:
+      source-map: 0.6.1
+    dev: true
+
   /clean-git-ref/2.0.1:
     resolution: {integrity: sha512-bLSptAy2P0s6hU4PzuIMKmMJJSE6gLXGH1cntDu7bWJUksvuM+7ReOK61mozULErYvP6a15rnYl0zFDef+pyPw==}
 
@@ -26464,14 +26429,6 @@ packages:
     resolution: {integrity: sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==}
     dev: true
 
-  /commander/2.17.1:
-    resolution: {integrity: sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==}
-    dev: true
-
-  /commander/2.19.0:
-    resolution: {integrity: sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==}
-    dev: true
-
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -26495,6 +26452,11 @@ packages:
   /commander/7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
+    dev: true
+
+  /commander/8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
     dev: true
 
   /commander/9.2.0:
@@ -28143,11 +28105,6 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: true
 
-  /emojis-list/2.1.0:
-    resolution: {integrity: sha1-TapNnbAPmBmIDHn6RXrlsJof04k=}
-    engines: {node: '>= 0.10'}
-    dev: true
-
   /emojis-list/3.0.0:
     resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
     engines: {node: '>= 4'}
@@ -28500,13 +28457,6 @@ packages:
     resolution: {integrity: sha512-EmTr31wppcaIAgblChZiuN/l9Y7DPyw8Xtbg7fIVngn6zMW+IEBJDJngeKC3x6wr0V/vcA2wqeFnaw1bFJbDdA==}
     dev: true
 
-  /es6-templates/0.2.3:
-    resolution: {integrity: sha1-XLmsn7He1usSOTQrgdeSu7QHjuQ=}
-    dependencies:
-      recast: 0.11.23
-      through: 2.3.8
-    dev: true
-
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
@@ -28756,7 +28706,7 @@ packages:
         optional: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.9.1_46ff1e3eeda39b5395c18b563a83af7a
-      '@typescript-eslint/utils': 5.20.0_eslint@8.6.0+typescript@4.5.5
+      '@typescript-eslint/utils': 5.21.0_eslint@8.6.0+typescript@4.5.5
       eslint: 8.6.0
     transitivePeerDependencies:
       - supports-color
@@ -28777,7 +28727,7 @@ packages:
         optional: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.9.1_46ff1e3eeda39b5395c18b563a83af7a
-      '@typescript-eslint/utils': 5.20.0_eslint@8.6.0+typescript@4.5.5
+      '@typescript-eslint/utils': 5.21.0_eslint@8.6.0+typescript@4.5.5
       eslint: 8.6.0
       jest: 26.6.3_ts-node@7.0.1
     transitivePeerDependencies:
@@ -28798,7 +28748,7 @@ packages:
       jest:
         optional: true
     dependencies:
-      '@typescript-eslint/utils': 5.20.0_eslint@8.6.0+typescript@4.5.5
+      '@typescript-eslint/utils': 5.21.0_eslint@8.6.0+typescript@4.5.5
       eslint: 8.6.0
     transitivePeerDependencies:
       - supports-color
@@ -29208,12 +29158,6 @@ packages:
       acorn-jsx: 5.3.2_acorn@8.7.0
       eslint-visitor-keys: 3.3.0
 
-  /esprima/3.1.3:
-    resolution: {integrity: sha1-/cpRzuYTOJXjyI1TXOSdv/YqRjM=}
-    engines: {node: '>=4'}
-    hasBin: true
-    dev: true
-
   /esprima/4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
@@ -29532,19 +29476,6 @@ packages:
   /extract-files/9.0.0:
     resolution: {integrity: sha512-CvdFfHkC95B4bBBk36hcEmvdR2awOdhhVUYH6S/zrVj3477zven/fJMYg7121h4T1xHZC+tetUpubpAhxwI7hQ==}
     engines: {node: ^10.17.0 || ^12.0.0 || >= 13.7.0}
-
-  /extract-text-webpack-plugin/4.0.0-beta.0_webpack@4.46.0:
-    resolution: {integrity: sha512-Hypkn9jUTnFr0DpekNam53X47tXn3ucY08BQumv7kdGgeVUBLq3DJHJTi6HNxv4jl9W+Skxjz9+RnK0sJyqqjA==}
-    engines: {node: '>= 6.9.0 || >= 8.9.0'}
-    peerDependencies:
-      webpack: ^3.0.0 || ^4.0.0
-    dependencies:
-      async: 2.6.4
-      loader-utils: 1.4.0
-      schema-utils: 0.4.7
-      webpack: 4.46.0_webpack-cli@4.9.2
-      webpack-sources: 1.4.3
-    dev: true
 
   /extract-zip/1.7.0:
     resolution: {integrity: sha512-xoh5G1W/PB0/27lXgMQyIhP5DSY/LhoCsOyZgb+6iMmRtCwVBo55uKaMoEYrDCKQhWvqEip5ZPKAc6eFNyf/MA==}
@@ -31345,14 +31276,15 @@ packages:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
     dev: true
 
-  /html-loader/0.5.5:
-    resolution: {integrity: sha512-7hIW7YinOYUpo//kSYcPB6dCKoceKLmOwjEMmhIobHuWGDVl0Nwe4l68mdG/Ru0wcUxQjVMEoZpkalZ/SE7zog==}
+  /html-loader/3.1.0_webpack@4.46.0:
+    resolution: {integrity: sha512-ycMYFRiCF7YANcLDNP72kh3Po5pTcH+bROzdDwh00iVOAY/BwvpuZ1BKPziQ35Dk9D+UD84VGX1Lu/H4HpO4fw==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
     dependencies:
-      es6-templates: 0.2.3
-      fastparse: 1.1.2
-      html-minifier: 3.5.21
-      loader-utils: 1.4.0
-      object-assign: 4.1.1
+      html-minifier-terser: 6.1.0
+      parse5: 6.0.1
+      webpack: 4.46.0_webpack-cli@4.9.2
     dev: true
 
   /html-minifier-terser/5.1.1:
@@ -31369,18 +31301,18 @@ packages:
       terser: 4.8.0
     dev: true
 
-  /html-minifier/3.5.21:
-    resolution: {integrity: sha512-LKUKwuJDhxNa3uf/LPR/KVjm/l3rBqtYeCOAekvG8F1vItxMUpueGd94i/asDDr8/1u7InxzFA5EeGjhhG5mMA==}
-    engines: {node: '>=4'}
+  /html-minifier-terser/6.1.0:
+    resolution: {integrity: sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw==}
+    engines: {node: '>=12'}
     hasBin: true
     dependencies:
-      camel-case: 3.0.0
-      clean-css: 4.2.4
-      commander: 2.17.1
+      camel-case: 4.1.2
+      clean-css: 5.3.0
+      commander: 8.3.0
       he: 1.2.0
-      param-case: 2.1.1
+      param-case: 3.0.4
       relateurl: 0.2.7
-      uglify-js: 3.4.10
+      terser: 5.13.0
     dev: true
 
   /html-tags/3.2.0:
@@ -31390,23 +31322,6 @@ packages:
 
   /html-void-elements/1.0.5:
     resolution: {integrity: sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==}
-    dev: true
-
-  /html-webpack-plugin/3.2.0_webpack@4.46.0:
-    resolution: {integrity: sha1-sBq71yOsqqeze2r0SS69oD2d03s=}
-    engines: {node: '>=6.9'}
-    deprecated: 3.x is no longer supported
-    peerDependencies:
-      webpack: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
-    dependencies:
-      html-minifier: 3.5.21
-      loader-utils: 0.2.17
-      lodash: 4.17.21
-      pretty-error: 2.1.2
-      tapable: 1.1.3
-      toposort: 1.0.7
-      util.promisify: 1.0.0
-      webpack: 4.46.0_webpack-cli@4.9.2
     dev: true
 
   /html-webpack-plugin/4.5.2_webpack@4.46.0:
@@ -31686,8 +31601,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
-    dev: true
-    optional: true
 
   /icss-replace-symbols/1.1.0:
     resolution: {integrity: sha1-Bupvg2ead0njhs/h/oEq5dsiPe0=}
@@ -34937,15 +34850,6 @@ packages:
     engines: {node: '>=4.3.0 <5.0.0 || >=5.10'}
     dev: true
 
-  /loader-utils/0.2.17:
-    resolution: {integrity: sha1-+G5jdNQyBabmxg6RlvF8Apm/s0g=}
-    dependencies:
-      big.js: 3.2.0
-      emojis-list: 2.1.0
-      json5: 0.5.1
-      object-assign: 4.1.1
-    dev: true
-
   /loader-utils/1.4.0:
     resolution: {integrity: sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA==}
     engines: {node: '>=4.0.0'}
@@ -35195,10 +35099,6 @@ packages:
     resolution: {integrity: sha512-EVm/rR94FJTZi3zefZ82fLWab+GX14LJN4HrWBcuo6Evmsl9hEfnqxgcHCKb9q+mNf6EVdsjx/qucYFIIB84pg==}
     dependencies:
       tslib: 2.4.0
-
-  /lower-case/1.1.4:
-    resolution: {integrity: sha1-miyr0bno4K6ZOkv31YdcOcQujqw=}
-    dev: true
 
   /lower-case/2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -35999,19 +35899,19 @@ packages:
     resolution: {integrity: sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==}
     dev: false
 
-  /monaco-editor-webpack-plugin/1.7.0_afb2ec2a36717f57f4cf2a90af1076bd:
-    resolution: {integrity: sha512-oItymcnlL14Sjd7EF7q+CMhucfwR/2BxsqrXIBrWL6LQplFfAfV+grLEQRmVHeGSBZ/Gk9ptzfueXnWcoEcFuA==}
+  /monaco-editor-webpack-plugin/6.0.0_e4146de625aad8e6c67af0b29262186e:
+    resolution: {integrity: sha512-vC886Mzpd2AkSM35XLkfQMjH+Ohz6RISVwhAejDUzZDheJAiz6G34lky1vyO8fZ702v7IrcKmsGwL1rRFnwvUA==}
     peerDependencies:
-      monaco-editor: ^0.15.1
-      webpack: ^4.5.0
+      monaco-editor: 0.30.x
+      webpack: ^4.5.0 || 5.x
     dependencies:
-      '@types/webpack': 4.41.32
-      monaco-editor: 0.15.6
+      loader-utils: 2.0.2
+      monaco-editor: 0.30.1
       webpack: 4.46.0_webpack-cli@4.9.2
     dev: true
 
-  /monaco-editor/0.15.6:
-    resolution: {integrity: sha512-JoU9V9k6KqT9R9Tiw1RTU8ohZ+Xnf9DMg6Ktqqw5hILumwmq7xqa/KLXw513uTUsWbhtnHoSJYYR++u3pkyxJg==}
+  /monaco-editor/0.30.1:
+    resolution: {integrity: sha512-B/y4+b2O5G2gjuxIFtCE2EkM17R2NM7/3F8x0qcPsqy4V83bitJTIO4TIeZpYlzu/xy6INiY/+84BEm6+7Cmzg==}
     dev: false
 
   /mongodb-core/3.2.2:
@@ -36376,12 +36276,6 @@ packages:
       '@sinonjs/text-encoding': 0.7.1
       just-extend: 4.2.1
       path-to-regexp: 1.8.0
-    dev: true
-
-  /no-case/2.3.2:
-    resolution: {integrity: sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==}
-    dependencies:
-      lower-case: 1.1.4
     dev: true
 
   /no-case/3.0.4:
@@ -37570,12 +37464,6 @@ packages:
       readable-stream: 2.3.7
     dev: true
 
-  /param-case/2.1.1:
-    resolution: {integrity: sha1-35T9jPZTHs915r75oIWPvHK+Ikc=}
-    dependencies:
-      no-case: 2.3.2
-    dev: true
-
   /param-case/3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
     dependencies:
@@ -38256,11 +38144,6 @@ packages:
   /prismjs/1.28.0:
     resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
     engines: {node: '>=6'}
-    dev: true
-
-  /private/0.1.8:
-    resolution: {integrity: sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==}
-    engines: {node: '>= 0.6'}
     dev: true
 
   /process-nextick-args/2.0.1:
@@ -39403,16 +39286,6 @@ packages:
       typeson-registry: 1.0.0-alpha.39
     dev: true
 
-  /recast/0.11.23:
-    resolution: {integrity: sha1-RR/TAEqx5N+bTktmN2sqIZEkYtM=}
-    engines: {node: '>= 0.8'}
-    dependencies:
-      ast-types: 0.9.6
-      esprima: 3.1.3
-      private: 0.1.8
-      source-map: 0.5.7
-    dev: true
-
   /rechoir/0.6.2:
     resolution: {integrity: sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=}
     engines: {node: '>= 0.10'}
@@ -40117,14 +39990,6 @@ packages:
       ajv: 5.5.2
     dev: true
 
-  /schema-utils/0.4.7:
-    resolution: {integrity: sha512-v/iwU6wvwGK8HbU9yi3/nhGzP0yGSuhQMzL6ySiec1FSrZZDkhm4noOSWzrNFo/jEc+SJY6jRTwuwbSXJPDUnQ==}
-    engines: {node: '>= 4'}
-    dependencies:
-      ajv: 6.12.6
-      ajv-keywords: 3.5.2_ajv@6.12.6
-    dev: true
-
   /schema-utils/1.0.0:
     resolution: {integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==}
     engines: {node: '>= 4'}
@@ -40769,6 +40634,35 @@ packages:
     dependencies:
       async: 2.6.4
       loader-utils: 1.4.0
+    dev: true
+
+  /source-map-loader/1.1.3:
+    resolution: {integrity: sha512-6YHeF+XzDOrT/ycFJNI53cgEsp/tHTMl37hi7uVyqFAlTXW109JazaQCkbc+jjoL2637qkH1amLi+JzrIpt5lA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      abab: 2.0.6
+      iconv-lite: 0.6.3
+      loader-utils: 2.0.2
+      schema-utils: 3.1.1
+      source-map: 0.6.1
+      whatwg-mimetype: 2.3.0
+    dev: true
+
+  /source-map-loader/1.1.3_webpack@4.46.0:
+    resolution: {integrity: sha512-6YHeF+XzDOrT/ycFJNI53cgEsp/tHTMl37hi7uVyqFAlTXW109JazaQCkbc+jjoL2637qkH1amLi+JzrIpt5lA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      abab: 2.0.6
+      iconv-lite: 0.6.3
+      loader-utils: 2.0.2
+      schema-utils: 3.1.1
+      source-map: 0.6.1
+      webpack: 4.46.0_webpack-cli@4.9.2
+      whatwg-mimetype: 2.3.0
 
   /source-map-resolve/0.5.3:
     resolution: {integrity: sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==}
@@ -41454,21 +41348,18 @@ packages:
       traverse: 0.6.6
     dev: true
 
-  /svg-sprite-loader/4.3.0_webpack@4.46.0:
-    resolution: {integrity: sha512-IkXI2e0bWr32G6VCqw0g8x8eRsMSUKkyd3axnI6D5pEZ9zv3Zi7FTVVnOUi/Io3i2D1UAofOW+35N8qwIUql4w==}
+  /svg-sprite-loader/6.0.11:
+    resolution: {integrity: sha512-TedsTf8wsHH6HgdwKjUveDZRC6q5gPloYV8A8/zZaRWP929J7x6TzQ6MvZFl+YYDJuJ0Akyuu/vNVJ+fbPuYXg==}
     engines: {node: '>=6'}
     dependencies:
       bluebird: 3.7.2
       deepmerge: 1.3.2
       domready: 1.0.8
       escape-string-regexp: 1.0.5
-      html-webpack-plugin: 3.2.0_webpack@4.46.0
       loader-utils: 1.4.0
       svg-baker: 1.7.0
       svg-baker-runtime: 1.4.7
       url-slug: 2.0.0
-    transitivePeerDependencies:
-      - webpack
     dev: true
 
   /svgo-loader/2.2.2_svgo@1.3.2:
@@ -42007,10 +41898,6 @@ packages:
       hoek: 6.1.3
     dev: false
 
-  /toposort/1.0.7:
-    resolution: {integrity: sha1-LmhELZ9k7HILjMieZEOsbKqVACk=}
-    dev: true
-
   /totalist/1.1.0:
     resolution: {integrity: sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==}
     engines: {node: '>=6'}
@@ -42152,6 +42039,37 @@ packages:
       micromatch: 4.0.5
       semver: 6.3.0
       typescript: 4.5.5
+    dev: true
+
+  /ts-loader/8.4.0_typescript@4.5.5:
+    resolution: {integrity: sha512-6nFY3IZ2//mrPc+ImY3hNWx1vCHyEhl6V+wLmL4CZcm6g1CqX7UKrkc6y0i4FwcfOhxyMPCfaEvh20f4r9GNpw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      typescript: '*'
+      webpack: '*'
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 4.5.0
+      loader-utils: 2.0.2
+      micromatch: 4.0.5
+      semver: 7.3.7
+      typescript: 4.5.5
+    dev: true
+
+  /ts-loader/8.4.0_typescript@4.5.5+webpack@4.46.0:
+    resolution: {integrity: sha512-6nFY3IZ2//mrPc+ImY3hNWx1vCHyEhl6V+wLmL4CZcm6g1CqX7UKrkc6y0i4FwcfOhxyMPCfaEvh20f4r9GNpw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      typescript: '*'
+      webpack: '*'
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 4.5.0
+      loader-utils: 2.0.2
+      micromatch: 4.0.5
+      semver: 7.3.7
+      typescript: 4.5.5
+      webpack: 4.46.0_webpack-cli@4.9.2
     dev: true
 
   /ts-log/2.2.4:
@@ -42584,15 +42502,6 @@ packages:
     dev: true
     optional: true
 
-  /uglify-js/3.4.10:
-    resolution: {integrity: sha512-Y2VsbPVs0FIshJztycsO2SfPk7/KAF/T72qzv9u5EpQ4kB2hQoHlhNQTsNyy6ul7lQtqJN/AoWeS23OzEiEFxw==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    dependencies:
-      commander: 2.19.0
-      source-map: 0.6.1
-    dev: true
-
   /uid-number/0.0.6:
     resolution: {integrity: sha1-DqEOgDXo61uOREnwbaHHMGY7qoE=}
     dev: true
@@ -42846,10 +42755,6 @@ packages:
     resolution: {integrity: sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==}
     dependencies:
       tslib: 2.4.0
-
-  /upper-case/1.1.3:
-    resolution: {integrity: sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=}
-    dev: true
 
   /upper-case/2.0.2:
     resolution: {integrity: sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==}
@@ -43825,7 +43730,6 @@ packages:
 
   /whatwg-mimetype/2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
-    dev: true
 
   /whatwg-url/5.0.0:
     resolution: {integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=}
