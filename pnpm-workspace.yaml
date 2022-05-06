@@ -1,5 +1,6 @@
 "packages":
     [
+        "azure/**",
         "common/**",
         "examples/**",
         "experimental/dds/**",
