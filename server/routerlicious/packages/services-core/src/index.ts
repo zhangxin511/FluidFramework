@@ -41,6 +41,7 @@ export {
 	IDocumentStorage,
 	IScribe,
 } from "./document";
+export { IDocumentManager } from "./documentManager";
 export { EmptyTaskMessageSender } from "./emptyTaskMessageSender";
 export {
 	IHttpServer,
@@ -114,6 +115,7 @@ export {
 	shouldRetryNetworkError,
 } from "./runWithRetry";
 export { ISecretManager } from "./secretManager";
+export { IStorageNameProvider } from "./storageNameProvider";
 export {
 	IAgent,
 	IAgentUploader,
