@@ -167,6 +167,7 @@ declare function get_old_ClassDeclaration_TestClientManager():
 declare function use_current_ClassDeclaration_TestClientManager(
     use: TypeOnly<current.TestClientManager>);
 use_current_ClassDeclaration_TestClientManager(
+    // @ts-expect-error compatibility expected to be broken
     get_old_ClassDeclaration_TestClientManager());
 
 /*

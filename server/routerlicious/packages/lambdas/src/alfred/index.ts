@@ -304,6 +304,56 @@ export function configureWebSocketServices(
 				[CommonProperties.clientId]: clientId,
 			};
 
+			const connectDocumentGetClientsNumberMetric = Lumberjack.newLumberMetric(
+				LumberEventName.ConnectDocumentGetClientsLength,
+				lumberjackProperties,
+			);
+			const connectedClientsLength = await clientManager
+				.getClientsLength(claims.tenantId, claims.documentId)
+				.then((response) => {
+					connectDocumentGetClientsNumberMetric.success(
+						"Successfully got clients length from client manager",
+					);
+					return response;
+				})
+				.catch(async (err) => {
+					const errMsg = `Failed to get clients. Error: ${safeStringify(
+						err,
+						undefined,
+						2,
+					)}`;
+					connectDocumentGetClientsNumberMetric.error(
+						"Failed to get clients length during connectDocument",
+						err,
+					);
+					return handleServerError(logger, errMsg, claims.documentId, claims.tenantId);
+				});
+
+			if (connectedClientsLength > maxNumberOfClientsPerDocument) {
+				throw new NetworkError(
+					429,
+					"Too Many Clients Connected to Document",
+					true /* canRetry */,
+					false /* isFatal */,
+					5 * 60 * 1000 /* retryAfterMs (5 min) */,
+				);
+			}
+
+			try {
+				await tenantManager.verifyToken(claims.tenantId, token);
+			} catch (error) {
+				if (isNetworkError(error)) {
+					throw error;
+				}
+				// We don't understand the error, so it is likely an internal service error.
+				const errMsg = `Could not verify connect document token. Error: ${safeStringify(
+					error,
+					undefined,
+					2,
+				)}`;
+				return handleServerError(logger, errMsg, claims.documentId, claims.tenantId);
+			}
+
 			const connectDocumentGetClientsMetric = Lumberjack.newLumberMetric(
 				LumberEventName.ConnectDocumentGetClients,
 				lumberjackProperties,
@@ -328,31 +378,6 @@ export function configureWebSocketServices(
 					);
 					return handleServerError(logger, errMsg, claims.documentId, claims.tenantId);
 				});
-
-			if (clients.length > maxNumberOfClientsPerDocument) {
-				throw new NetworkError(
-					429,
-					"Too Many Clients Connected to Document",
-					true /* canRetry */,
-					false /* isFatal */,
-					5 * 60 * 1000 /* retryAfterMs (5 min) */,
-				);
-			}
-
-			try {
-				await tenantManager.verifyToken(claims.tenantId, token);
-			} catch (error) {
-				if (isNetworkError(error)) {
-					throw error;
-				}
-				// We don't understand the error, so it is likely an internal service error.
-				const errMsg = `Could not verify connect document token. Error: ${safeStringify(
-					error,
-					undefined,
-					2,
-				)}`;
-				return handleServerError(logger, errMsg, claims.documentId, claims.tenantId);
-			}
 
 			const room: IRoom = {
 				tenantId: claims.tenantId,

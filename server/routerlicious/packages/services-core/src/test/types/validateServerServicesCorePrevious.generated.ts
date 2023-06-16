@@ -359,6 +359,7 @@ declare function get_old_InterfaceDeclaration_IClientManager():
 declare function use_current_InterfaceDeclaration_IClientManager(
     use: TypeOnly<current.IClientManager>);
 use_current_InterfaceDeclaration_IClientManager(
+    // @ts-expect-error compatibility expected to be broken
     get_old_InterfaceDeclaration_IClientManager());
 
 /*

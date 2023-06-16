@@ -62,6 +62,11 @@ export interface IClientManager {
 	getClients(tenantId: string, documentId: string): Promise<ISignalClient[]>;
 
 	/**
+	 * Returns the length of all clients currently connected.
+	 */
+	getClientsLength(tenantId: string, documentId: string): Promise<number>;
+
+	/**
 	 * Returns all clients currently connected including a keep alive time.
 	 * Should be used with delis read only client functionality.
 	 */

@@ -48,6 +48,10 @@ export class TestClientManager implements IClientManager {
 		return signalClients;
 	}
 
+	public async getClientsLength(tenantId: string, documentId: string): Promise<number> {
+		return (await this.getClients(tenantId, documentId)).length;
+	}
+
 	/**
 	 * Returns all clients currently connected including a keep alive time.
 	 * Should be used with delis read only client functionality.

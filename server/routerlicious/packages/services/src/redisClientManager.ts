@@ -66,6 +66,10 @@ export class ClientManager implements IClientManager {
 		return clients;
 	}
 
+	public async getClientsLength(tenantId: string, documentId: string): Promise<number> {
+		return this.client.hlen(this.getKey(tenantId, documentId));
+	}
+
 	/**
 	 * Returns all clients currently connected including a keep alive time.
 	 * Should be used with delis read only client functionality.
